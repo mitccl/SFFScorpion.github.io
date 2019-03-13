@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video List -->
+	<include name="CommonList">
+		<control type="group">
+			<left>75</left>
+			<top>120</top>
+			<width>1060</width>
+			<height>930</height>
+			<include>WindowOpenCloseAnimation</include>
+			<include>SettingsBG</include>
+			<include>Scrollbar</include>
+			<visible>Control.IsVisible(50) + !Container.Content(episodes)</visible>
+			<control type="panel" id="50">
+				<left>10</left>
+				<top>10</top>
+				<width>1050</width>
+				<height>902</height>
+				<onleft>SetProperty(MediaMenu,True,home)</onleft>
+				<onleft>SetFocus(9050)</onleft>
+				<onright>60</onright>
+				<onup>9031</onup>
+				<ondown>50</ondown>
+				<viewtype label="Common List">list</viewtype>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<include>WindowSlide</include>
+				<!-- <itemlayout height="113" width="1020" condition="!Container.Content(files)"> -->
+				<itemlayout height="113" width="1020">
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>1000</width>
+						<label>BACK</label>
+						<visible>String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>830</width>
+						<font>font50b</font>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<right>25</right>
+						<top>0</top>
+						<width>100</width>
+						<font>font25</font>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+				</itemlayout>
+				<!-- <focusedlayout height="113" width="1020" condition="!Container.Content(files)"> -->
+				<focusedlayout height="113" width="1020">
+					<control type="image">
+						<width>1020</width>
+						<height>113</height>
+						<include>FOScroll</include>
+						<texture background="true" border="5" colordiffuse="selected">buttonfo4.png</texture>
+					</control>
+ 					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>1000</width>
+						<label>BACK</label>
+						<visible>String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>830</width>
+						<font>font50b</font>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+				</control>
+					<control type="label">
+						<right>25</right>
+						<top>0</top>
+						<width>100</width>
+						<font>font25</font>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+				</focusedlayout>
+
+				<itemlayout height="100" width="1020" condition="Container.Content(files)">
+					<control type="image">
+						<left>25</left>
+						<top>52</top>
+						<width>960</width>
+						<height>50</height>
+						<texture background="true">separator2.png</texture>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>980</width>
+						<label>BACK</label>
+						<visible>String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<font>font37B</font>
+						<width>980</width>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="100" width="1020" condition="Container.Content(files)">
+					<control type="image">
+						<width>1020</width>
+						<height>100</height>
+						<texture background="true" border="40" colordiffuse="selected">buttonfo2.png</texture>
+						<include>FOScroll</include>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>980</width>
+						<label>BACK</label>
+						<visible>String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<font>font37B</font>
+						<width>980</width>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+					</control>
+				</focusedlayout>
+
+			</control>
+		</control>
+	</include>
+</includes>

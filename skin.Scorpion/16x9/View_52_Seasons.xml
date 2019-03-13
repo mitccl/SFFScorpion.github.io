@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="SeasonList">
+		<control type="group">
+			<visible>Control.IsVisible(52)</visible>
+			<control type="image">
+				<include>FullScreenDimensions</include>
+				<texture background="true">$INFO[Container.ListItemAbsolute(1).Art(fanart)]</texture>
+			</control>
+<!-- arrows -->
+			<control type="group">
+				<control type="group">
+					<left>25</left>
+					<top>220</top>
+					<control type="image">
+						<width>100</width>
+						<height>200</height>
+						<texture>arrow_L.png</texture>
+					</control>
+				</control>
+				<control type="group">
+					<left>1795</left>
+					<top>220</top>
+					<control type="image">
+						<width>100</width>
+						<height>200</height>
+						<texture>arrow_R.png</texture>
+					</control>
+				</control>
+			</control>
+
+<!-- season list -->
+			<control type="group">
+				<left>100</left>
+				<top>130</top>
+				<width>1720</width>
+				<height>400</height>
+				<control type="image">
+					<left>30</left>
+					<top>10</top>
+					<height>370</height>
+					<width>1670</width>
+					<!-- <aspectratio>scale</aspectratio> -->
+					<texture background="true" border="20">season_banner.png</texture>
+				</control>
+				<control type="wraplist" id="52">
+					<width>1740</width>
+					<height>400</height>
+					<onleft>52</onleft>
+					<onright>52</onright>
+					<onup>noop</onup>
+					<ondown>6000</ondown>
+					<orientation>horizontal</orientation>
+					<focusposition>2</focusposition>
+					<pagecontrol>5260</pagecontrol>
+					<viewtype label="Seasons">list</viewtype>
+					<preloaditems>2</preloaditems>
+					<visible>Container.Content(seasons)</visible>
+					<scrolltime tween="sine" easing="inout" reversable="false">400</scrolltime>
+					<itemlayout height="390" width="350" condition="Container.Content(seasons)">
+						<control type="group">
+							<top>20</top>
+							<left>40</left>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture>65poster.png</texture>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<aspectratio>scale</aspectratio>
+								<texture>$INFO[ListItem.Art(poster)]</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture background="true">thumb_mask.png</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture background="true">defaultfolderbackposter.png</texture>
+								<visible>String.Contains(ListItem.Label,..)</visible>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture colordiffuse="">panel.png</texture>
+							</control>
+							<control type="label">
+								<left>-50</left>
+								<top>300</top>
+								<height>50</height>
+								<width>350</width>
+								<align>center</align>
+								<font>font40</font>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!String.Contains(ListItem.Label,..)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="390" width="350" condition="Container.Content(seasons)">
+						<control type="group">
+							<top>17</top>
+							<left>40</left>
+							<include>PanelZoom2</include>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture>65poster.png</texture>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<aspectratio>scale</aspectratio>
+								<texture>$INFO[ListItem.Art(poster)]</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture background="true">thumb_mask.png</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture background="true">defaultfolderbackposter.png</texture>
+								<visible>String.Contains(ListItem.Label,..)</visible>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture colordiffuse="">panel.png</texture>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture colordiffuse="selected">panel.png</texture>
+								<include>FOSeason</include>
+								<visible>!Control.HasFocus(6000)</visible>
+							</control>
+							<control type="label">
+								<left>-50</left>
+								<top>300</top>
+								<height>50</height>
+								<width>350</width>
+								<align>center</align>
+								<font>font40</font>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!String.Contains(ListItem.Label,..)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+
+	<!-- episodes list -->
+			<control type="group">
+				<left>365</left>
+				<top>620</top>
+				<width>1220</width>
+				<height>440</height>
+				<include>Visible_Fade</include>
+				<control type="image">
+					<height>440</height>
+					<width>1220</width>
+					<aspectratio>scale</aspectratio>
+					<texture background="true" border="5">epi_banner.png</texture>
+				</control>
+				<visible>Container.Content(seasons)</visible>
+				<control type="list" id="6000">
+					<top>10</top>
+					<left>10</left>
+					<width>1200</width>
+					<height>425</height>
+					<onleft>noop</onleft>
+					<onright>noop</onright>
+					<onup>52</onup>
+					<ondown>6000</ondown>
+					<focusposition>1</focusposition>
+					<orientation>vertical</orientation>
+					<preloaditems>2</preloaditems>
+					<scrolltime easing="out" tween="quadratic">300</scrolltime>
+					<content>$INFO[Container.ListItem.FolderPath]</content>
+					<visible>!String.Contains(ListItem.Label,..)</visible>
+					<itemlayout height="140" width="1200">
+						<control type="group">
+							<control type="image">
+								<left>0</left>
+								<width>250</width>
+								<height>140</height>
+								<texture background="true" border="5">50b.png</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<width>250</width>
+								<height>140</height>
+								<aspectratio aligny="top">scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>!String.Contains(ListItem.Label,..)</visible>
+								<bordersize>10</bordersize>
+							</control>
+						</control>
+						<control type="group">
+							<left>270</left>
+							<top>5</top>
+							<height>20</height>
+							<control type="label">
+								<top>7</top>
+								<width>1180</width>
+								<height>30</height>
+								<font>font35</font>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!String.StartsWith(ListItem.Label,..)</visible>
+							</control>
+							<control type="label">
+								<top>60</top>
+								<height>60</height>
+								<width>1180</width>
+								<font>font30r</font>
+								<label>[CAPITALIZE]$VAR[Label_InfoLine][/CAPITALIZE]</label>
+								<visible>!String.StartsWith(ListItem.Label,..)</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="140" width="1200">
+						<control type="image">
+							<width>1200</width>
+							<height>140</height>
+							<texture background="true" border="40" colordiffuse="selected">buttonfo4.png</texture>
+							<visible>Control.HasFocus(6000)</visible>
+							<include>FOScroll</include>
+						</control>
+						<control type="group">
+							<control type="image">
+								<left>0</left>
+								<width>250</width>
+								<height>140</height>
+								<texture background="true" border="5">50w.png</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<control type="image">
+								<left>0</left>
+								<width>250</width>
+								<height>140</height>
+								<aspectratio aligny="top">scale</aspectratio>
+								<texture background="true">$INFO[ListItem.Icon]</texture>
+								<visible>!String.Contains(ListItem.Label,..)</visible>
+								<bordersize>10</bordersize>
+							</control>
+						</control>
+						<control type="group">
+							<left>270</left>
+							<top>5</top>
+							<height>20</height>
+							<control type="label">
+								<top>7</top>
+								<width>680</width>
+								<height>30</height>
+								<font>font35</font>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!String.StartsWith(ListItem.Label,..)</visible>
+							</control>
+							<control type="label">
+								<top>60</top>
+								<height>60</height>
+								<width>680</width>
+								<font>font30r</font>
+								<label>[CAPITALIZE]$VAR[Label_InfoLine][/CAPITALIZE]</label>
+								<visible>!String.StartsWith(ListItem.Label,..)</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<visible>!String.StartsWith(ListItem.Label,..)</visible>
+				<left>1465</left>
+				<top>620</top>
+				<width>100</width>
+				<height>440</height>
+				<control type="image">
+					<left>45</left>
+					<top>10</top>
+					<width>70</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(52).ListItem.MPAA,flags/mpaa/,.png]</texture>
+				</control>
+				<control type="image">
+					<!-- <left>120</left> -->
+					<bottom>10</bottom>
+					<width>100</width>
+					<height>70</height>
+					<texture>$VAR[Studio]</texture>
+					<aspectratio>keep</aspectratio>
+				</control>
+			</control>
+			<!-- <control type="image"> -->
+				<!-- <left>660</left> -->
+				<!-- <top>670</top> -->
+				<!-- <width>600</width> -->
+				<!-- <height>350</height> -->
+				<!-- <texture background="true" border="10" diffuse="thumb_dif90.png">thumb-back.png</texture> -->
+				<!-- <include>VisFade</include> -->
+				<!-- <visible>String.StartsWith(ListItem.Label,..)</visible> -->
+			<!-- </control> -->
+			<control type="image">
+				<left>660</left>
+				<top>670</top>
+				<width>600</width>
+				<height>350</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true" border="5">defaultfolderbackls.png</texture>
+				<include>VisFade</include>
+				<visible>String.StartsWith(ListItem.Label,..)</visible>
+			</control>
+		</control>
+	</include>
+</includes>

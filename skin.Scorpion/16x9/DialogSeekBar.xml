@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>1</defaultcontrol>
+	<visible>[Window.IsActive(videoosd) | Window.IsActive(fullscreeninfo) | Player.ShowInfo | Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding] + !Window.IsVisible(MusicOSD) + VideoPlayer.IsFullscreen + !Window.IsVisible(1150)</visible>
+	<controls>
+		<control type="group">
+			<animation effect="slide" start="0,90" end="0,0" time="200">WindowOpen</animation>
+			<animation effect="slide" end="0,90" start="0,0" time="200">WindowClose</animation>
+			<animation effect="slide" start="0,90" end="0,0" time="200">VisibleChange</animation>
+			<bottom>0</bottom>
+			<height>50</height>
+			<visible>!VideoPlayer.Content(LiveTV)</visible>
+			<control type="progress">
+				<width>100%</width>
+				<height>50</height>
+				<overlaytexture />
+				<texturebg>osd/bottom_bar.png</texturebg>
+				<lefttexture />
+				<midtexture>osd/midtexture_cache.png</midtexture>
+				<righttexture />
+				<info>Player.ProgressCache</info>
+			</control>
+			<control type="progress">
+				<top>3</top>
+				<width>100%</width>
+				<height>43</height>
+				<overlaytexture />
+				<texturebg>osd/texturebg_cache.png</texturebg>
+				<lefttexture />
+				<midtexture diffuse="osd/midtexturedif2.png">osd/midtexture.png</midtexture>
+				<righttexture />
+				<info>Player.Progress</info>
+			</control>
+			<control type="label">
+				<top>6</top>
+				<width>100%</width>
+				<height>90</height>
+				<font>font35</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+				<textoffsety>-2</textoffsety>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$INFO[Player.Title]$INFO[player.duration, • ]</label>
+			</control>
+			<control type="label">
+				<top>6</top>
+				<width>100%</width>
+				<height>90</height>
+				<font>font35</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+				<textoffsety>-2</textoffsety>
+				<aligny>top</aligny>
+				<align>left</align>
+				<label>$VAR[SeekLabelVar]</label>
+				<visible>!VideoPlayer.Content(LiveTV)</visible>
+			</control>
+			<control type="label">
+				<top>6</top>
+				<width>100%</width>
+				<height>90</height>
+				<font>font35</font>
+				<textoffsetx>15</textoffsetx>
+				<textcolor>grey2</textcolor>
+				<shadowcolor>shadow</shadowcolor>
+				<textoffsety>-2</textoffsety>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[System.Time]$INFO[player.FinishTime, [,]]</label>
+			</control>
+		</control>
+		<control type="group">
+			<width>186</width>
+			<height>186</height>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<visible>!VideoPlayer.Content(LiveTV) + [Player.Paused + !Window.IsActive(subtitlesearch)]</visible>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" easing="out" />
+				<effect type="fade" end="100" time="150" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="100" delay="100" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="200" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" start="150" end="100" center="960,540" time="300" tween="cubic" easing="out" />
+				<effect type="fade" end="100" time="150" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="100" delay="100" />
+				<effect type="zoom" start="100" end="130" center="960,540" time="200" tween="cubic" easing="in" />
+			</animation>
+			<control type="image">
+				<width>186</width>
+				<height>186</height>
+				<texture>osd/.png</texture>
+			</control>
+			<control type="image">
+				<width>186</width>
+				<height>186</height>
+				<texture>osd/.png</texture>
+			</control>
+		</control>
+		<control type="group">
+			<width>186</width>
+			<height>186</height>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<visible>!VideoPlayer.Content(LiveTV) + [Player.Paused + !Window.IsActive(subtitlesearch)]</visible>
+			<animation type="WindowOpen" reversible="false">
+				<effect type="zoom" start="150" end="100" center="CenterWidth,CenterHeight" time="300" tween="cubic" easing="out" />
+				<effect type="fade" end="100" time="150" />
+			</animation>
+			<animation type="WindowClose" reversible="false">
+				<effect type="fade" start="100" end="0" time="100" delay="100" />
+				<effect type="zoom" start="100" end="130" center="CenterWidth,CenterHeight" time="200" tween="cubic" easing="in" />
+			</animation>
+			<animation type="Visible" reversible="false">
+				<effect type="zoom" start="150" end="100" center="CenterWidth,CenterHeight" time="300" tween="cubic" easing="out" />
+				<effect type="fade" end="100" time="150" />
+			</animation>
+			<animation type="Hidden" reversible="false">
+				<effect type="fade" start="100" end="0" time="100" delay="100" />
+				<effect type="zoom" start="100" end="130" center="CenterWidth,CenterHeight" time="200" tween="cubic" easing="in" />
+			</animation>
+			<control type="image">
+				<width>186</width>
+				<height>186</height>
+				<texture>osd/bg_play_large.png</texture>
+			</control>
+			<control type="image">
+				<width>186</width>
+				<height>186</height>
+				<texture>osd/btn_pause.png</texture>
+			</control>
+		</control>
+		<control type="grouplist">
+			<left>30</left>
+			<top>930</top>
+			<width>748</width>
+			<height>90</height>
+			<itemgap>10</itemgap>
+			<orientation>horizontal</orientation>
+			<include>VisibleFadeAnimation</include>
+			<visible>Player.Forwarding | Player.Rewinding</visible>
+			<animation effect="slide" start="0" end="0,-495" time="50" condition="VideoPlayer.Content(livetv)">conditional</animation>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="image">
+				<top>3</top>
+				<width>90</width>
+				<height>87</height>
+				<aspectratio>keep</aspectratio>
+				<texture flipx="true">osd/ff.png</texture>
+				<colordiffuse>FFe5e5e5</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="800" pulse="true" condition="true">Conditional</animation>
+				<visible>Player.Rewinding</visible>
+			</control>
+			<control type="label">
+				<label>$VAR[VideoPlayerForwardRewindVar]</label>
+				<width min="10" max="300">auto</width>
+				<height>90</height>
+				<textoffsetx>0</textoffsetx>
+				<font>font55</font>
+				<shadowcolor>44000000</shadowcolor>
+				<textcolor>DDe5e5e5</textcolor>
+			</control>
+			<control type="image">
+				<top>3</top>
+				<width>90</width>
+				<height>87</height>
+				<aspectratio>keep</aspectratio>
+				<texture>osd/ff.png</texture>
+				<colordiffuse>FFe5e5e5</colordiffuse>
+				<animation effect="fade" start="100" end="60" time="800" pulse="true" condition="true">Conditional</animation>
+				<visible>Player.Forwarding</visible>
+			</control>
+		</control>
+	</controls>
+</window>
