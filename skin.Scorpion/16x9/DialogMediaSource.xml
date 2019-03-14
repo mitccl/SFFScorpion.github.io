@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">10</defaultcontrol>
+	<include>DialogAnimation</include>
+	<controls>
+		<control type="group">
+			<top>240</top>
+			<right>50</right>
+			<width>1000</width>
+			<height>800</height>
+			<control type="image">
+				<width>100%</width>
+				<height>100%</height>
+				<texture border="40">65.png</texture>
+			</control>
+
+			<control type="label" id="2">
+				<description>header label</description>
+				<align>center</align>
+				<top>20</top>
+				<width>1000</width>
+				<height>50</height>
+				<textoffsetx>15</textoffsetx>
+				<font>font50</font>
+				<textcolor>white2</textcolor>
+				<label>$LOCALIZE[13406]</label>
+				<align>center</align>
+			</control>
+			<control type="label">
+				<description>path label</description>
+				<align>center</align>
+				<top>70</top>
+				<width>1000</width>
+				<height>60</height>
+				<textoffsetx>15</textoffsetx>
+				<font>font55</font>
+				<label>1021</label>
+				<textcolor>grey</textcolor>
+			</control>
+
+<!-- enter source -->
+			<control type="group">
+				<left>10</left>
+				<top>130</top>
+				<width>1200</width>
+				<control type="list" id="10">
+					<width>980</width>
+					<height>100</height>
+					<onup>9001</onup>
+					<onleft>450</onleft>
+					<ondown>9000</ondown>
+					<pagecontrol>60</pagecontrol>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="100" width="980">
+						<control type="image">
+							<width>980</width>
+							<height>100</height>
+							<texture border="25">button.png</texture>
+						</control>
+						<control type="label">
+							<width>735</width>
+							<height>60</height>
+							<font>font35</font>
+							<textoffsetx>15</textoffsetx>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="100" width="980">
+						<control type="image">
+							<width>980</width>
+							<height>100</height>
+							<texture border="25">button.png</texture>
+						</control>
+						<control type="image">
+							<width>980</width>
+							<height>100</height>
+							<texture border="5">buttonfo2.png</texture>
+						</control>
+						<control type="label">
+							<width>735</width>
+							<height>60</height>
+							<font>font35</font>
+							<textoffsetx>15</textoffsetx>
+							<selectedcolor>selected</selectedcolor>
+							<info>ListItem.Label</info>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+
+<!-- browse -->
+			<control type="group">
+				<left>10</left>
+				<top>300</top>
+				<control type="grouplist" id="9000">
+					<width>980</width>
+					<height>80</height>
+					<onup>10</onup>
+					<ondown>12</ondown>
+					<onleft>450</onleft>
+					<itemgap>10</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="11">
+						<description>Browse Button</description>
+						<width>320</width>
+						<label>1024</label>
+						<align>center</align>
+						<font>font35</font>
+					</control>
+					<control type="button" id="13">
+						<description>Add Path Button</description>
+						<width>320</width>
+						<label>15019</label>
+						<align>center</align>
+						<font>font35</font>
+					</control>
+					<control type="button" id="14">
+						<description>Remove Path Button</description>
+						<width>320</width>
+						<label>1210</label>
+						<align>center</align>
+						<font>font35</font>
+					</control>
+				</control>
+			</control>
+
+<!-- name source -->
+			<control type="group">
+				<left>10</left>
+				<top>400</top>
+				<control type="label">
+					<description>Name label</description>
+					<align>center</align>
+					<top>20</top>
+					<width>980</width>
+					<height>100</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font35</font>
+					<label>1022</label>
+					<textcolor>grey</textcolor>
+				</control>
+				<control type="edit" id="12">
+					<description>Name Button</description>
+					<top>100</top>
+					<width>980</width>
+					<height>100</height>
+					<align>center</align>
+					<label />
+					<font>font35</font>
+					<onup>9000</onup>
+					<onleft>12</onleft>
+					<onright>19</onright>
+					<ondown>9001</ondown>
+					<texturefocus border="5">buttonfo.png</texturefocus>
+					<texturenofocus border="5">button.png</texturenofocus>
+				</control>
+			</control>
+
+<!-- ok/cancel -->
+			<control type="group">
+				<left>10</left>
+				<top>650</top>
+				<control type="grouplist" id="9001">
+					<width>980</width>
+					<height>80</height>
+					<align>center</align>
+					<onup>12</onup>
+					<onleft>450</onleft>
+					<onright>10</onright>
+					<ondown>10</ondown>
+					<itemgap>20</itemgap>
+					<orientation>horizontal</orientation>
+					<control type="button" id="18">
+						<description>Ok Button</description>
+						<width>310</width>
+						<label>186</label>
+						<font>font35</font>
+					</control>
+					<control type="button" id="19">
+						<description>Cancel Button</description>
+						<width>310</width>
+						<label>222</label>
+						<font>font35</font>
+					</control>
+				</control>
+			</control>
+
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1140" type="dialog">
+	<defaultcontrol always="true">550</defaultcontrol>
+	<controls>
+		<control type="group">
+			<right>100</right>
+			<top>200</top>
+			<width>430</width>
+			<height>265</height>
+			<include>DialogAnimation</include>
+			<include>SettingsBG</include>
+			<control type="grouplist" id="550">
+				<left>10</left>
+				<top>10</top>
+				<width>410</width>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<control type="button" id="551">
+					<description>addons</description>
+					<font>font35B</font>
+					<width>410</width>
+					<height>80</height>
+					<align>center</align>
+					<textwidth>435</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<onclick>Dialog.Close(1140)</onclick>
+					<onclick>ActivateWindow(1130)</onclick>
+					<visible>yes</visible>
+					<label>ADDONS</label>
+				</control>
+				<control type="button" id="552">
+					<description>settings</description>
+					<font>font35B</font>
+					<width>410</width>
+					<height>80</height>
+					<align>center</align>
+					<textwidth>435</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<onclick>Dialog.Close(1140)</onclick>
+					<onclick>ActivateWindow(settings)</onclick>
+					<label>SETTINGS</label>
+					<visible>yes</visible>
+				</control>
+				<control type="button" id="553">
+					<description>filemanager</description>
+					<font>font35B</font>
+					<width>410</width>
+					<height>80</height>
+					<align>center</align>
+					<textwidth>435</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<onclick>Dialog.Close(1140)</onclick>
+					<onclick>ActivateWindow(Filemanager)</onclick>
+					<label>FILEMANAGER</label>
+					<visible>yes</visible>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

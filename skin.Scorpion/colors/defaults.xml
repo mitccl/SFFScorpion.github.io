@@ -1,0 +1,15 @@
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="white2">FFDFDFDF</color>
+	<color name="grey">FFC0C0C0</color>
+	<color name="grey2">FF808080</color>
+	<color name="grey3">FF505050</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF0B6585</color>
+	<color name="red">FFFF0000</color>
+	<color name="selected">FF1491bf</color>
+	<color name="invalid">FFFF0000</color>
+	<color name="themecolor">FF6ea7fb</color>
+	<color name="themecolor_transparent">8C033B5E5</color>
+	<color name="shadow">FF000000</color>
+</colors>

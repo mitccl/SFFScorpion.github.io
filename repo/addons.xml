@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addons>
+
+<addon id="plugin.video.scorpion" version="0.1" name="Scorpion" provider-name="Pick">
+	<requires>
+		<import addon="xbmc.python"/>
+		<import addon="script.module.scorpion" version="0.1"/>
+		<import addon="script.scorpion.artwork" version="0.1" />
+		<import addon="script.scorpion.metadata" version="0.1" />
+		<import addon="script.module.urlresolver" />
+		<import addon="script.module.requests" />
+		<import addon="script.module.metahandler" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="scorpion.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.service" library="service.py" start="startup" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Get some!</summary>
+		<description>Hacked up Exodus</description>
+		<platform>all</platform>
+		<license>GNU GENERAL PUBLIC LICENSE. Version 3, 29 June 2007</license>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+    			<screenshot>resources/screenshots/screenshot-01.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-02.jpg</screenshot>
+    			<screenshot>resources/screenshots/screenshot-03.jpg</screenshot>
+		</assets>
+	</extension>
+</addon>
+
+<addon id="script.module.scorpion" name="Scorpion Module" version="0.1" provider-name="Scorpion">
+	<requires>
+		<import addon="xbmc.python" />
+		<import addon="script.module.beautifulsoup4"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<platform>all</platform>
+		<summary lang="en">Scorpion</summary>
+	</extension>
+</addon>
+
+<addon id="script.scorpion.artwork" version="0.1" name="Scorpion Artwork" provider-name="Scorpion">
+	<requires>
+		<import addon="xbmc.python"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Themes for the Scorpion Addon</summary>
+		<description></description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="script.scorpion.metadata" version="0.1" name="Scorpion Metadata" provider-name="Pick">
+	<requires>
+		<import addon="xbmc.python"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary>Metadata for the Scorpion Addon</summary>
+		<description>Metadata for Scorpion are maintained separately to make distribution of the the addon itself easier/faster.</description>
+		<platform>all</platform>
+	</extension>
+</addon>
+
+<addon id="repository.scorpion" name="Scorpion" version="0.1" provider-name="Pick">
+    <extension point="xbmc.addon.repository" name="Scorpion">
+        <info compressed="false">https://raw.githubusercontent.com/jstuart138/Scorpion/master/addons.xml</info>
+        <checksum>https://raw.githubusercontent.com/jstuart138/Scorpion/master/addons.xml.md5</checksum>
+        <datadir zip="true">https://raw.githubusercontent.com/jstuart138/Scorpion/master/</datadir>
+    </extension>
+    <extension point="xbmc.addon.metadata">
+        <summary>Van candy</summary>
+        <description>The F$*k ? </description>
+        <platform>all</platform>
+    </extension>
+</addon>
+
+<addon id="skin.Scorpion" version="0.1" name="SCORPION" provider-name="Pick">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0"/>
+		<import addon="resource.images.studios.coloured"/>
+		<import addon="metadata.universal"/>
+	</requires>
+	<extension point="xbmc.gui.skin" debugging="false" effectslowdown="0.75">
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="16x9" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="es_ES">The F...?</summary>
+		<description>IM LOST</description>
+		<platform>all</platform>
+		<license>CC BY-NC-SA 4.0</license>
+	</extension>
+</addon>
+</addons>
