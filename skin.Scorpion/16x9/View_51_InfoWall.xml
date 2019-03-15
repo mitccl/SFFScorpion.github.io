@@ -84,17 +84,26 @@
 			<include>Scrollbar</include>
 		</control>
 
-<!-- InfoPanel -->
+		<!-- InfoPanel -->
 		<control type="group">
 			<right>50</right>
-			<top>120</top>
+			<top>114</top>
 			<width>680</width>
-			<height>930</height>
+			<height>936</height>
 			<include>WindowOpenCloseAnimation</include>
 			<include>VisibleFadeAnimation</include>
 			<control type="group">
 				<visible>![Container.Content(episodes) | Container.Content(seasons) | Window.IsActive(addoninformation) | Window.IsActive(addonbrowser)]</visible>
 				<include>SettingsBG</include>
+				<control type="image">
+					<left>10</left>
+					<top>5</top>
+					<width>660</width>
+					<height>380</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">65ls.png</texture>
+					<bordersize>2</bordersize>
+				</control>
 				<control type="image">
 					<left>10</left>
 					<top>10</top>
@@ -120,44 +129,35 @@
 					<width>660</width>
 					<height>370</height>
 					<aspectratio>keep</aspectratio>
-					<texture background="true" border="5" diffuse="thumb_dif85.png">defaultfolderbackls.png</texture>
+					<texture background="true" border="5" diffuse="thumb_dif85.png">defaultfolderbackls65.png</texture>
 					<bordersize>2</bordersize>
 					<visible>String.StartsWith(ListItem.Label,..)</visible>
 				</control>
 				<control type="image">
 					<right>20</right>
-					<top>335</top>
-					<width>60</width>
-					<height>40</height>
+					<top>320</top>
+					<width>80</width>
+					<height>55</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.MPAA,flags/mpaa/,.png]</texture>
 					<bordertexture colordiffuse="grey2">mpaa_box2.png</bordertexture>
 				</control>
 				<control type="image">
-					<left>170</left>
-					<top>325</top>
-					<width>85</width>
-					<height>60</height>
+					<left>20</left>
+					<top>320</top>
+					<width>100</width>
+					<height>70</height>
 					<aspectratio>keep</aspectratio>
 					<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 				</control>
-				<control type="image">
-					<left>20</left>
-					<top>325</top>
-					<width>85</width>
-					<height>60</height>
-					<aspectratio>keep</aspectratio>
-					<texture background="true">$VAR[Studio]</texture>
-				</control>
-<!-- RunScript(script.skin.helper.service,action=stripstring,splitchar=.,string=$INFO[System.BuildVersion],output=kodiversion_main) -->
-				<control type="label">
+				<control type="label" id="5100">
 					<top>385</top>
 					<width>660</width>
 					<height>60</height>
 					<font>font40</font>
 					<scroll>true</scroll>
 					<textoffsetx>15</textoffsetx>
-					<label>$INFO[Window.Property(kodiversion_main)]</label>
+					<label>$INFO[ListItem.Label]</label>
 				</control>
 				<control type="label"> 
 					<left>20</left>
@@ -179,26 +179,27 @@
 				</control>
 				<control type="textbox">
 					<label>$INFO[ListItem.Plot]</label>
-					<top>540</top>
+					<top>545</top>
 					<left>40</left>
 					<width>600</width>
-					<height>380</height>
+					<height>360</height>
+					<aligny>center</aligny>
 					<font>font35tb</font>
 					<textcolor>white2</textcolor>
 					<autoscroll time="3000" delay="2500" repeat="5000"></autoscroll>
 					<pagecontrol>61</pagecontrol>
 				</control>
 				<!-- <control type="image"> -->
-					<!-- <bottom>20</bottom> -->
-					<!-- <left>10</left> -->
-					<!-- <width>660</width> -->
-					<!-- <height>380</height> -->
-					<!-- <texture>logo.png</texture> -->
-					<!-- <visible>String.IsEmpty(ListItem.Plot)</visible> -->
+				<!-- <bottom>20</bottom> -->
+				<!-- <left>10</left> -->
+				<!-- <width>660</width> -->
+				<!-- <height>380</height> -->
+				<!-- <texture>logo.png</texture> -->
+				<!-- <visible>String.IsEmpty(ListItem.Plot)</visible> -->
 				<!-- </control> -->
 			</control>
 
-<!-- AddonBrowser -->
+			<!-- AddonBrowser -->
 			<control type="group">
 				<visible>Window.IsActive(addonbrowser)</visible>
 				<control type="image">
@@ -248,12 +249,12 @@
 					<label>$VAR[Addon_InfoLine]</label>
 				</control>
 				<!-- <control type="image"> -->
-					<!-- <bottom>20</bottom> -->
-					<!-- <left>10</left> -->
-					<!-- <width>660</width> -->
-					<!-- <height>380</height> -->
-					<!-- <texture>logo.png</texture> -->
-					<!-- <visible>String.Contains(ListItem.Label,..) | String.Contains(ListItem.Label,next)</visible> -->
+				<!-- <bottom>20</bottom> -->
+				<!-- <left>10</left> -->
+				<!-- <width>660</width> -->
+				<!-- <height>380</height> -->
+				<!-- <texture>logo.png</texture> -->
+				<!-- <visible>String.Contains(ListItem.Label,..) | String.Contains(ListItem.Label,next)</visible> -->
 				<!-- </control> -->
 			</control>
 		</control>

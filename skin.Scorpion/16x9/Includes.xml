@@ -6,7 +6,6 @@
 	<include file="Includes_16x9.xml" />
 	<include file="View_50_List.xml" />
 	<include file="View_51_InfoWall.xml" />
-	<include file="View_602_Season.xml" />
 	<include file="View_52_Seasons.xml" />
 	<include file="View_53_Episode.xml" />
 	<include file="variables.xml" />
@@ -469,25 +468,20 @@
 		<animation effect="slide" Tweener="cubic" start="0,0" end="2000,0" time="500">WindowClose</animation>
 	</include>
 
-	<include name="Label_Fade">
-		<animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
-		<animation effect="fade" start="100" end="0" time="100">UnFocus</animation>
-	</include>
-
-	<include name="Visible_Fade">
-		<animation effect="fade" start="0" end="100" time="200" delay="100">Visible</animation>
-		<animation effect="fade" start="100" end="50" time="100">Hidden</animation>
-	</include>
-
 	<include name="WindowSlide">
 		<animation effect="slide" Tweener="cubic" start="0,0" end="-2000,0" time="600" condition="[Window.IsVisible(addonsettings) | Window.IsVisible(selectdialog) | Window.IsVisible(favourites) | Window.IsVisible(virtualkeyboard)] | [Control.IsVisible(51) + Container.Content(addons)]">Conditional</animation>
 	</include>
 
 	<include name="PanelSlide">
-		<animation effect="slide" Tweener="cubic" end="0,150" condition="Integer.IsGreater(Container(50).NumItems,5) + !Integer.IsGreater(Container(50).NumItems,7)">Conditional</animation>
-		<animation effect="slide" Tweener="cubic" end="0,300" condition="Integer.IsGreater(Container(50).NumItems,3) + !Integer.IsGreater(Container(50).NumItems,5)">Conditional</animation>
-		<animation effect="slide" Tweener="cubic" end="0,450" condition="Integer.IsGreater(Container(50).NumItems,1) + !Integer.IsGreater(Container(50).NumItems,3)">Conditional</animation>
-		<animation effect="slide" Tweener="cubic" end="0,600" condition="Integer.IsEqual(Container(50).NumItems,1)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,0" condition="Integer.IsEqual(Container(50).NumItems,9)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,0" condition="Integer.IsEqual(Container(50).NumItems,8)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,0" condition="Integer.IsEqual(Container(50).NumItems,7)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,679" condition="Integer.IsEqual(Container(50).NumItems,1)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,566" condition="Integer.IsEqual(Container(50).NumItems,2)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,453" condition="Integer.IsEqual(Container(50).NumItems,3)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,340" condition="Integer.IsEqual(Container(50).NumItems,4)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,227" condition="Integer.IsEqual(Container(50).NumItems,5)">Conditional</animation>
+		<animation effect="slide" Tweener="cubic" end="0,114" condition="Integer.IsEqual(Container(50).NumItems,6)">Conditional</animation>
 	</include>
 
 	<include name="PanelSlide2">
@@ -508,8 +502,8 @@
 	</include>
 
 	<include name="PanelZoom">
-		<animation effect="zoom" end="105" center="100,150" time="300">Focus</animation>
-		<animation effect="zoom" end="100" center="100,150" time="300">UnFocus</animation>
+		<animation effect="zoom" end="110" center="100,150" time="400">Focus</animation>
+		<animation effect="zoom" end="100" center="100,150" time="400">UnFocus</animation>
 	</include>
 
 	<include name="FOPanel">
@@ -529,18 +523,39 @@
 
 	<include name="FOScroll">
 		<animation effect="fade" start="0" end="100" time="400" reversible="false">Focus</animation>
-		<animation effect="fade" start="100" end="0" time="50" reversible="false">UnFocus</animation>
+		<animation effect="fade" start="100" end="0" time="100" reversible="false">UnFocus</animation>
 	</include>
 
-	<include name="Visable">
-		<animation effect="fade" start="100" end="0" time="500" delay="200" reversible="false">Visible</animation>
-		<!-- <animation effect="fade" start="100" end="0" time="100" reversible="false">Hidden</animation> -->
+	<include name="FOFadeIn">
+		<animation effect="fade" start="0" end="100" time="300">Focus</animation>
+		<animation effect="fade" start="100" end="0" time="50">UnFocus</animation>
 	</include>
 
-	<include name="VisFade">
-		<animation effect="fade" time="300">Visible</animation>
-		<animation effect="fade" time="300">Hidden</animation>
+	<include name="FOFadeOut">
+		<animation effect="fade" start="100" end="0" time="200" reversible="false">Focus</animation>
 	</include>
+
+	<include name="UNFOFadeOut">
+		<animation effect="fade" start="100" end="0" time="200" delay="00">Focus</animation>
+		<animation effect="fade"  start="0" end="100" time="100" delay="00">UnFocus</animation>
+	</include>
+
+	<include name="Label_FadeIn">
+		<animation effect="fade" start="0" end="100" time="200" delay="100">Focus</animation>
+		<animation effect="fade" start="100" end="0" time="100">UnFocus</animation>
+	</include>
+
+	<include name="Label_FadeOut">
+		<animation effect="fade" start="100" end="0" time="100" delay="100">Focus</animation>
+		<animation effect="fade" start="0" end="100" time="100">UnFocus</animation>
+	</include>
+
+	<include name="Visible_Fade">
+		<animation effect="fade" start="0" end="100" time="200">Visible</animation>
+		<animation effect="fade" start="100" end="0" time="500" delay="500">Hidden</animation>
+	</include>
+
+
 
 	<include name="FullscreenDimensions">
 		<width>100%</width>

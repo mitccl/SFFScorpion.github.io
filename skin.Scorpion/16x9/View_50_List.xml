@@ -7,30 +7,53 @@
 			<top>120</top>
 			<width>1060</width>
 			<height>930</height>
+				<control type="image">
+					<description>background image</description>
+					<left>0</left>
+					<top>914</top>
+					<width>1030</width>
+					<height>15</height>
+					<!-- <aspectratio>scale</aspectratio> -->
+					<texture background="true" border="5">listpanelB.png</texture>
+				</control>
+				<control type="image">
+					<description>background image</description>
+					<left>0</left>
+					<top>-6</top>
+					<width>1030</width>
+					<height>15</height>
+					<!-- <aspectratio>scale</aspectratio> -->
+					<texture background="true" border="5">listpanelT.png</texture>
+					<include>PanelSlide</include>
+				</control>
 			<include>WindowOpenCloseAnimation</include>
-			<include>SettingsBG</include>
 			<include>Scrollbar</include>
-			<visible>Control.IsVisible(50) + !Container.Content(episodes)</visible>
-			<control type="panel" id="50">
-				<left>10</left>
-				<top>10</top>
-				<width>1050</width>
-				<height>902</height>
-				<onleft>SetProperty(MediaMenu,True,home)</onleft>
-				<onleft>SetFocus(9050)</onleft>
-				<onright>60</onright>
+			<control type="list" id="50">
+				<left>0</left>
+				<top>9</top>
+				<width>1060</width>
+				<height>905</height>
 				<onup>9031</onup>
 				<ondown>50</ondown>
 				<viewtype label="Common List">list</viewtype>
+				<preloaditems>2</preloaditems>
 				<pagecontrol>60</pagecontrol>
 				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<include>PanelSlide</include>
 				<include>WindowSlide</include>
-				<!-- <itemlayout height="113" width="1020" condition="!Container.Content(files)"> -->
 				<itemlayout height="113" width="1020">
+					<control type="image">
+						<width>1030</width>
+						<height>113</height>
+						<texture background="true" border="0">listpanelM.png</texture>
+						<include>Visible_Fade</include>
+					</control>
 					<control type="label">
 						<left>25</left>
 						<top>0</top>
 						<width>1000</width>
+						<textcolor>black</textcolor>
+						<shadowcolor>white</shadowcolor>
 						<label>BACK</label>
 						<visible>String.StartsWith(ListItem.Label,..)</visible>
 					</control>
@@ -38,9 +61,12 @@
 						<left>25</left>
 						<top>0</top>
 						<width>830</width>
-						<font>font50b</font>
+						<textcolor>black</textcolor>
+						<!-- <font>font50b</font> -->
+						<shadowcolor>white</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+						<include>VisFade</include>
 					</control>
 					<control type="label">
 						<right>25</right>
@@ -51,28 +77,63 @@
 						<visible>!String.StartsWith(ListItem.Label,..)</visible>
 					</control>
 				</itemlayout>
-				<!-- <focusedlayout height="113" width="1020" condition="!Container.Content(files)"> -->
-				<focusedlayout height="113" width="1020">
-					<control type="image">
-						<width>1020</width>
+				<focusedlayout height="113" width="1030">
+ 					<control type="image">
+						<width>1030</width>
 						<height>113</height>
-						<include>FOScroll</include>
-						<texture background="true" border="5" colordiffuse="selected">buttonfo4.png</texture>
+						<texture background="true" border="0">listpanelNoButton.png</texture>
+					</control>
+					<control type="image">
+						<width>1030</width>
+						<height>113</height>
+						<include>FOFadeIn</include>
+						<texture background="true" border="0">listpanelButton.png</texture>
+					</control>
+					<control type="image">
+						<width>1030</width>
+						<height>113</height>
+						<include>UNFOFadeOut</include>
+						<texture background="true" border="0">listpanelMFILL.png</texture>
+					</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>1000</width>
+						<textcolor>themecolor</textcolor>
+						<shadowcolor>grey2</shadowcolor>
+						<label>BACK</label>
+						<visible>String.StartsWith(ListItem.Label,..)</visible>
+						<include>Label_FadeIn</include>
 					</control>
  					<control type="label">
 						<left>25</left>
 						<top>0</top>
 						<width>1000</width>
+						<textcolor>black</textcolor>
+						<shadowcolor>white</shadowcolor>
 						<label>BACK</label>
 						<visible>String.StartsWith(ListItem.Label,..)</visible>
+						<include>Label_FadeOut</include>
 					</control>
 					<control type="label">
 						<left>25</left>
 						<top>0</top>
 						<width>830</width>
-						<font>font50b</font>
+						<textcolor>themecolor</textcolor>
+						<shadowcolor>grey2</shadowcolor>
 						<label>$INFO[ListItem.Label]</label>
 						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+						<include>Label_FadeIn</include>
+				</control>
+					<control type="label">
+						<left>25</left>
+						<top>0</top>
+						<width>830</width>
+						<textcolor>black</textcolor>
+						<shadowcolor>white</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!String.StartsWith(ListItem.Label,..)</visible>
+						<include>Label_FadeOut</include>
 				</control>
 					<control type="label">
 						<right>25</right>
@@ -82,9 +143,10 @@
 						<label>$INFO[ListItem.Label2]</label>
 						<visible>!String.StartsWith(ListItem.Label,..)</visible>
 					</control>
+
 				</focusedlayout>
 
-				<itemlayout height="100" width="1020" condition="Container.Content(files)">
+<!-- 				<itemlayout height="100" width="1020" condition="Container.Content(files)">
 					<control type="image">
 						<left>25</left>
 						<top>52</top>
@@ -132,7 +194,9 @@
 					</control>
 				</focusedlayout>
 
+ -->
 			</control>
 		</control>
 	</include>
+
 </includes>

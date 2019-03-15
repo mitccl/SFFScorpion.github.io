@@ -1,0 +1,425 @@
+Action 0:17:45: INSTALL.
+1: MySQL Workbench 8.0 CE 2: {096A0B19-97AF-4DE4-8692-B9BF86A451B7}
+Action 0:17:45: FindRelatedProducts. Searching for related applications
+Action 0:17:45: AppSearch. Searching for installed applications
+Action 0:17:45: SetWIX_IS_NETFRAMEWORK_45_OR_LATER_INSTALLED.
+Action 0:17:45: LaunchConditions. Evaluating launch conditions
+MySQL Workbench requires the Visual C++ 2015 Redistributable Package to be installed. Click the Download-Button on the next page to open a web page containing further instructions.
+1: MySQL Workbench 8.0 CE 2: {096A0B19-97AF-4DE4-8692-B9BF86A451B7} 3: 3
+Action 0:17:45: INSTALL.
+1: MySQL Utilities 2: {BEDAC2EF-DBA2-4B25-857A-7DF385FA645E}
+Action 0:17:45: FindRelatedProducts. Searching for related applications
+Action 0:17:45: AppSearch. Searching for installed applications
+Action 0:17:45: LaunchConditions. Evaluating launch conditions
+Action 0:17:45: ValidateProductID.
+Action 0:17:45: CostInitialize. Computing space requirements
+Action 0:17:45: FileCost. Computing space requirements
+Action 0:17:45: CostFinalize. Computing space requirements
+Action 0:17:45: InstallValidate. Validating install
+Min: 0 Max: 566
+Position: 25
+Position: 50
+Position: 75
+Position: 100
+Position: 125
+Position: 150
+Position: 175
+Position: 200
+Position: 225
+Position: 250
+Position: 275
+Position: 300
+Position: 325
+Position: 350
+Position: 350
+Position: 350
+Action 0:17:45: RemoveExistingProducts. Removing applications
+Action 0:17:45: InstallInitialize.
+Action 0:17:45: ProcessComponents. Updating component registration
+Action 0:17:45: GenerateScript. Generating script operations for action:
+Position: 351
+Position: 352
+Updating component registration
+DoStep
+Position: 353
+Position: 354
+Position: 355
+Position: 356
+Position: 357
+Position: 358
+Position: 359
+Position: 360
+Position: 361
+Position: 362
+Position: 363
+Position: 364
+Action 0:17:45: UnpublishFeatures. Unpublishing Product Features
+Action 0:17:45: RemoveRegistryValues. Removing system registry values
+Action 0:17:45: RemoveShortcuts. Removing shortcuts
+Action 0:17:45: RemoveEnvironmentStrings. Updating environment strings
+Action 0:17:45: RemoveFiles. Removing files
+Action 0:17:45: WixSchedInternetShortcuts.
+Action 0:17:45: RemoveFolders. Removing folders
+Action 0:17:45: CreateFolders. Creating folders
+Folder: Creating folders
+DoStep
+Position: 365
+Position: 366
+Position: 367
+Action 0:17:45: InstallFiles. Copying new files
+File: Copying new files,  Directory: ,  Size:
+DoStep
+Position: 368
+Position: 369
+Position: 370
+Position: 371
+Position: 372
+Position: 373
+Position: 374
+Position: 375
+Position: 376
+Position: 377
+Position: 378
+Position: 379
+Position: 380
+Position: 381
+Position: 382
+Position: 383
+Position: 384
+Position: 385
+Position: 386
+Position: 387
+Position: 388
+Position: 389
+Position: 390
+Position: 391
+Position: 392
+Position: 393
+Position: 394
+Position: 395
+Position: 396
+Position: 397
+Position: 398
+Position: 399
+Position: 400
+Position: 401
+Position: 402
+Position: 403
+Position: 404
+Position: 405
+Position: 406
+Position: 407
+Position: 408
+Position: 409
+Position: 410
+Position: 411
+Position: 412
+Position: 413
+Action 0:17:45: CreateShortcuts. Creating shortcuts
+Shortcut: Creating shortcuts
+DoStep
+Position: 414
+Position: 415
+Position: 416
+Action 0:17:45: WixRollbackInternetShortcuts.
+
+DoStep
+Position: 417
+Position: 418
+Action 0:17:45: WixCreateInternetShortcuts.
+
+DoStep
+Position: 419
+Position: 420
+Action 0:17:45: WriteRegistryValues. Writing system registry values
+Key: Writing system registry values, Name: , Value:
+DoStep
+Position: 421
+Position: 422
+Position: 423
+Position: 424
+Position: 425
+Position: 426
+Position: 427
+Position: 428
+Position: 429
+Position: 430
+Position: 431
+Position: 432
+Position: 433
+Position: 434
+Position: 435
+Position: 436
+Position: 437
+Position: 438
+Position: 439
+Position: 440
+Position: 441
+Position: 442
+Position: 443
+Position: 444
+Position: 445
+Position: 446
+Position: 447
+Position: 448
+Position: 449
+Position: 450
+Position: 451
+Action 0:17:45: WriteEnvironmentStrings. Updating environment strings
+Name: Updating environment strings, Value: , Action
+DoStep
+Position: 452
+Position: 453
+Position: 454
+Action 0:17:45: RegisterUser. Registering user
+Action 0:17:45: RegisterProduct. Registering product
+Registering product
+DoStep
+Position: 455
+Position: 456
+Position: 457
+Position: 458
+Position: 459
+Action 0:17:46: PublishFeatures. Publishing Product Features
+Feature: Publishing Product Features
+DoStep
+Position: 460
+Position: 461
+Position: 462
+Action 0:17:46: PublishProduct. Publishing product information
+
+DoStep
+Position: 463
+Position: 464
+Position: 465
+Position: 466
+Position: 467
+Position: 468
+Position: 469
+Position: 470
+Action 0:17:46: InstallFinalize.
+Min: 0 Max: 34136800
+Position: 34136800
+Action 0:17:46: ProcessComponents. Updating component registration
+Step: 24000
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Position: 0
+Action 0:17:46: CreateFolders. Creating folders
+Folder: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Folder: C:\ProgramData\Microsoft\Windows\Start Menu\Programs\MySQL\MySQL Utilities 1.6\Documentation\
+DoStep
+Action 0:17:46: InstallFiles. Copying new files
+File: CHANGES.txt,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 38499
+Position: 38499
+File: python27.dll,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 2954240
+Position: 2992739
+File: mysqlauditadmin.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 3825763
+File: mysqlauditgrep.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 4658787
+File: mysqlbinlogmove.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 5491811
+File: mysqlbinlogpurge.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 6324835
+File: mysqlbinlogrotate.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 7157859
+File: mysqldbcompare.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 7990883
+File: mysqldbcopy.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 8823907
+File: mysqldbexport.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 9656931
+File: mysqldbimport.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 10489955
+File: mysqldiff.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 11322979
+File: mysqldiskusage.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 12156003
+File: mysqlfailover.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 12989027
+File: mysqlfrm.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 13822051
+File: mysqlgrants.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 14655075
+File: mysqlindexcheck.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 15488099
+File: mysqlmetagrep.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 16321123
+File: mysqlprocgrep.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 17154147
+File: mysqlreplicate.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 17987171
+File: mysqlrpladmin.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 18820195
+File: mysqlrplcheck.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 19653219
+File: mysqlrplms.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 20486243
+File: mysqlrplshow.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 21319267
+File: mysqlrplsync.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 22152291
+File: mysqlserverclone.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 22985315
+File: mysqlserverinfo.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 23818339
+File: mysqlslavetrx.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 24651363
+File: mysqluc.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 25484387
+File: mysqluserclone.exe,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 833024
+Position: 26317411
+File: LICENSE.txt,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 18326
+Position: 26335737
+File: _ctypes.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 109568
+Position: 26445305
+File: _multiprocessing.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 32256
+Position: 26477561
+File: _socket.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 47616
+Position: 26525177
+File: bz2.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 80896
+Position: 26606073
+File: pyexpat.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 162816
+Position: 26768889
+File: select.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 10752
+Position: 26779641
+File: unicodedata.pyd,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 687616
+Position: 27467257
+File: README.txt,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 35511
+Position: 27502768
+File: library.zip,  Directory: C:\Program Files\MySQL\MySQL Utilities 1.6\,  Size: 1582352
+Position: 29085120
+Action 0:17:46: CreateShortcuts. Creating shortcuts
+Shortcut: 4slhtov_|MySQL Utilities Console
+DoStep
+Action 0:17:46: WixRollbackInternetShortcuts.
+Action 0:17:46: WixCreateInternetShortcuts.
+Position: 29087120
+Position: 29089120
+Position: 29091120
+Position: 29093120
+Position: 29095120
+Position: 29097120
+Position: 29099120
+Position: 29101120
+Position: 29103120
+Position: 29105120
+Position: 29107120
+Position: 29109120
+Position: 29111120
+Position: 29113120
+Position: 29115120
+Position: 29117120
+Position: 29119120
+Position: 29121120
+Position: 29123120
+Position: 29125120
+Position: 29127120
+Position: 29129120
+Position: 29131120
+Position: 29133120
+Position: 29135120
+Position: 29137120
+Position: 29139120
+Position: 29141120
+Position: 29143120
+Action 0:17:47: WriteRegistryValues. Writing system registry values
+Step: 13200
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities 1.6.5, Name: , Value:
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities  1.6.5, Name: Version, Value: 1.6.5
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities  1.6.5, Name: Location, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\
+DoStep
+Position: 29143120
+Key: \Software\MySQL AB\MySQL Utilities  1.6.5, Name: , Value:
+DoStep
+Action 0:17:47: WriteEnvironmentStrings. Updating environment strings
+Step: 13200
+Position: 29143120
+Name: PATH, Value: C:\Program Files\MySQL\MySQL Utilities 1.6\, Action 1610612737
+DoStep
+Action 0:17:47: RegisterProduct. Registering product
+Position: 33566800
+{BEDAC2EF-DBA2-4B25-857A-7DF385FA645E}
+DoStep
+Action 0:17:47: PublishFeatures. Publishing Product Features
+Feature: Install
+DoStep
+Feature: Complete
+DoStep
+Action 0:17:47: PublishProduct. Publishing product information
+Action 0:17:47: RollbackCleanup. Removing backup files
+1: MySQL Utilities 2: {BEDAC2EF-DBA2-4B25-857A-7DF385FA645E} 3: 1

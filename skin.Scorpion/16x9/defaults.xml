@@ -7,12 +7,12 @@
 		<top>0</top>
 		<align>left</align>
 		<aligny>center</aligny>
-		<font>font50</font>
+		<font>font45</font>
 		<label />
-		<textcolor>white</textcolor>
+		<textcolor>black</textcolor>
 		<disabledcolor>grey3</disabledcolor>
 		<selectedcolor>themecolor</selectedcolor>
-		<shadowcolor>black</shadowcolor>
+		<shadowcolor>white</shadowcolor>
 		<scrollspeed>100</scrollspeed>
 	</default>
 	<default type="fadelabel">

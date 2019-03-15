@@ -82,17 +82,19 @@
 							<control type="image">
 								<width>250</width>
 								<height>350</height>
+								<aspectratio>scale</aspectratio>
 								<texture background="true">defaultfolderbackposter.png</texture>
 								<visible>String.Contains(ListItem.Label,..)</visible>
+								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
 								<width>250</width>
 								<height>350</height>
-								<texture colordiffuse="">panel.png</texture>
+								<texture>panel.png</texture>
 							</control>
 							<control type="label">
 								<left>-50</left>
-								<top>300</top>
+								<top>295</top>
 								<height>50</height>
 								<width>350</width>
 								<align>center</align>
@@ -104,9 +106,9 @@
 					</itemlayout>
 					<focusedlayout height="390" width="350" condition="Container.Content(seasons)">
 						<control type="group">
-							<top>17</top>
+							<top>20</top>
 							<left>40</left>
-							<include>PanelZoom2</include>
+							<include>PanelZoom</include>
 							<control type="image">
 								<width>250</width>
 								<height>350</height>
@@ -130,12 +132,13 @@
 								<height>350</height>
 								<texture background="true">defaultfolderbackposter.png</texture>
 								<visible>String.Contains(ListItem.Label,..)</visible>
+								<aspectratio>scale</aspectratio>
 								<bordersize>5</bordersize>
 							</control>
 							<control type="image">
 								<width>250</width>
 								<height>350</height>
-								<texture colordiffuse="">panel.png</texture>
+								<texture>panel.png</texture>
 							</control>
 							<control type="image">
 								<width>250</width>
@@ -146,7 +149,7 @@
 							</control>
 							<control type="label">
 								<left>-50</left>
-								<top>300</top>
+								<top>295</top>
 								<height>50</height>
 								<width>350</width>
 								<align>center</align>
@@ -161,22 +164,23 @@
 
 	<!-- episodes list -->
 			<control type="group">
-				<left>365</left>
+				<left>350</left>
 				<top>620</top>
 				<width>1220</width>
 				<height>440</height>
 				<include>Visible_Fade</include>
 				<control type="image">
+					<left>50</left>
 					<height>440</height>
-					<width>1220</width>
-					<aspectratio>scale</aspectratio>
-					<texture background="true" border="5">epi_banner.png</texture>
+					<width>1120</width>
+					<!-- <aspectratio>keep</aspectratio> -->
+					<texture background="true" border="0">epi_banner.png</texture>
 				</control>
 				<visible>Container.Content(seasons)</visible>
 				<control type="list" id="6000">
 					<top>10</top>
-					<left>10</left>
-					<width>1200</width>
+					<left>60</left>
+					<width>1100</width>
 					<height>425</height>
 					<onleft>noop</onleft>
 					<onright>noop</onright>
@@ -213,7 +217,7 @@
 							<height>20</height>
 							<control type="label">
 								<top>7</top>
-								<width>1180</width>
+								<width>1080</width>
 								<height>30</height>
 								<font>font35</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -231,7 +235,7 @@
 					</itemlayout>
 					<focusedlayout height="140" width="1200">
 						<control type="image">
-							<width>1200</width>
+							<width>1100</width>
 							<height>140</height>
 							<texture background="true" border="40" colordiffuse="selected">buttonfo4.png</texture>
 							<visible>Control.HasFocus(6000)</visible>
@@ -261,7 +265,7 @@
 							<height>20</height>
 							<control type="label">
 								<top>7</top>
-								<width>680</width>
+								<width>1080</width>
 								<height>30</height>
 								<font>font35</font>
 								<label>$INFO[ListItem.Label]</label>
@@ -278,6 +282,22 @@
 						</control>
 					</focusedlayout>
 				</control>
+				<!-- <control type="image"> -->
+					<!-- <left>1010</left> -->
+					<!-- <top>-65</top> -->
+					<!-- <width>180</width> -->
+					<!-- <height>70</height> -->
+					<!-- <aspectratio>keep</aspectratio> -->
+					<!-- <texture>$INFO[Container(52).ListItem.MPAA,flags/mpaa/,.png]</texture> -->
+				<!-- </control> -->
+				<!-- <control type="image"> -->
+					<!-- <left>80</left> -->
+					<!-- <top>-80</top> -->
+					<!-- <width>100</width> -->
+					<!-- <height>70</height> -->
+					<!-- <texture>HBO.png</texture> -->
+					<!-- <aspectratio>keep</aspectratio> -->
+				<!-- </control> -->
 			</control>
 			<control type="group">
 				<visible>!String.StartsWith(ListItem.Label,..)</visible>
@@ -285,22 +305,6 @@
 				<top>620</top>
 				<width>100</width>
 				<height>440</height>
-				<control type="image">
-					<left>45</left>
-					<top>10</top>
-					<width>70</width>
-					<height>40</height>
-					<aspectratio>keep</aspectratio>
-					<texture>$INFO[Container(52).ListItem.MPAA,flags/mpaa/,.png]</texture>
-				</control>
-				<control type="image">
-					<!-- <left>120</left> -->
-					<bottom>10</bottom>
-					<width>100</width>
-					<height>70</height>
-					<texture>$VAR[Studio]</texture>
-					<aspectratio>keep</aspectratio>
-				</control>
 			</control>
 			<!-- <control type="image"> -->
 				<!-- <left>660</left> -->
