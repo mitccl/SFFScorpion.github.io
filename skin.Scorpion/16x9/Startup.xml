@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<window>
-	<allowoverlay>no</allowoverlay>
-	<onload condition="System.HasAddon(script.favourites)">RunScript(script.favourites)</onload>
-	<onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
-	<controls />
-</window>
