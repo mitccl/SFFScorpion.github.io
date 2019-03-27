@@ -47,9 +47,9 @@
 
 <addon id="repository.scorpion" name="Scorpion" version="0.1" provider-name="Pick">
 	<extension point="xbmc.addon.repository" name="Scorpion">
-		<info compressed="false">https://sffscorpion.000webhostapp.com/repo/addons.xml</info>
-		<checksum>https://sffscorpion.000webhostapp.com/repo/addons.xml.md5</checksum>
-		<datadir zip="true">https://sffscorpion.000webhostapp.com/repo</datadir>
+		<info compressed="false">https://sffscorpion.github.io/repo/addons.xml</info>
+		<checksum>https://sffscorpion.github.io/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://sffscorpion.github.io/repo</datadir>
 	</extension>
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Scorpion repository</summary>
