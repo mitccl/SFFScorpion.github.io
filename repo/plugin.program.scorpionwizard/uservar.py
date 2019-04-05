@@ -7,7 +7,7 @@ ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
 ADDONTITLE     = 'Scorpion Wizard'
 EXCLUDES       = [ADDON_ID]
 # Text File with build info in it.
-BUILDFILE      = 'https://sffscorpion.000webhostapp.com/vault/docs/builds.txt'
+BUILDFILE      = 'http://sffscorpion.000webhostapp.com/vault/docs/builds.txt'
 # How often you would list it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 3
@@ -34,17 +34,17 @@ ART            = os.path.join(PATH, 'resources', 'art')
 # Example:  ICONMAINT     = os.path.join(ART, 'mainticon.png')
 #           ICONSETTINGS  = 'http://aftermathwizard.net/repo/wizard/settings.png'
 # Leave as http:// for default icon
-ICONBUILDS     = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONMAINT      = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONAPK        = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONADDONS     = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONYOUTUBE    = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONSAVE       = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONTRAKT      = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONREAL       = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONLOGIN      = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONCONTACT    = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
-ICONSETTINGS   = 'https://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONBUILDS     = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONMAINT      = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONAPK        = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONADDONS     = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONYOUTUBE    = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONSAVE       = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONTRAKT      = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONREAL       = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONLOGIN      = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONCONTACT    = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
+ICONSETTINGS   = 'http://sffscorpion.000webhostapp.com/vault/images/icon.png'
 # Hide the ====== seperators 'Yes' or 'No'
 HIDESPACERS    = 'No'
 # Character used in seperator
