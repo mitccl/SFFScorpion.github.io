@@ -1,0 +1,7 @@
+self.tm_img_link 
+
+  https://image.tmdb.org/t/p/w300tt1727824
+  
+  fanart.tv
+  
+  http://webservice.fanart.tv/v3/movies/tt1727824?api_key=700fe4194676601962050ed57dee0576
