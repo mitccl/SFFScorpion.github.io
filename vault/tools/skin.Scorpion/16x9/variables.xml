@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+	<!-- List Label Vars -->
+ 	<variable name="List_Var">
+		<value condition="[Container.Content(files) + String.StartsWith(ListItem.Path,plugin)]">$INFO[ListItem.Title]</value>
+		<value condition="!ListItem.IsParentFolder">$INFO[ListItem.Label]</value>
+		<value condition="ListItem.IsParentFolder"> • BACK • </value>
+		<value>$INFO[ListItem.Label2]</value>
+	</variable>
+
+	<variable name="Addon_InfoLine">
+		<value condition="!ListItem.IsParentFolder">$INFO[ListItem.AddonVersion,[COLOR=selected]Addon Version:[/COLOR][CR]  ][CR][CR]$INFO[ListItem.AddonType,[COLOR=selected]Addon Type:[/COLOR][CR]  ][CR][CR]$INFO[ListItem.AddonSummary,[COLOR=selected]Addon Summary:[/COLOR][CR]  ]</value>
+	</variable>
+
+   <variable name="Label_InfoLine">
+        <value>$VAR[Label_Genre][CR]$VAR[Label_Premiered]$VAR[Label_Duration]</value>
+    </variable>
+
+    <variable name="Label_MPAA">
+        <value condition="!String.IsEmpty(ListItem.MPAA)">$INFO[ListItem.MPAA]</value>
+    </variable>
+
+    <variable name="Label_Premiered">
+        <value condition="!String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Premiered]</value>
+        <value condition="String.IsEmpty(ListItem.Premiered)">$INFO[ListItem.Year]</value>
+    </variable>
+
+    <variable name="Label_Duration">
+        <value condition="!String.IsEmpty(ListItem.Duration)"> • $INFO[ListItem.Duration,, min]</value>
+    </variable>
+
+    <variable name="Label_Genre">
+        <value condition="!String.IsEmpty(ListItem.Genre)">$INFO[ListItem.Genre]</value>
+    </variable>
+
+	<variable name="Image_Var">
+		<value condition="String.Contains(ListItem.Label,Next)">next.png</value>
+		<value condition="[Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(files)] + !String.IsEmpty(ListItem.Art(fanart))">$INFO[ListItem.Art(fanart)]</value>
+		<value condition="[Container.Content(files) + !String.IsEmpty(ListItem.Art(fanart))]">$INFO[Container(51).ListItem.Art(fanart)]</value>
+		<!-- <value condition=" + ![String.IsEmpty(ListItem.Art(poster)) | ListItem.IsParentFolder]">$INFO[ListItem.Art(poster)]</value> -->
+	</variable>
+
+	<variable name="Studio">
+		<value>resource://resource.images.studios.coloured/$INFO[ListItem.Studio].png</value>
+	</variable>
+
+	<variable name="StudioFlagColorVar">
+		<value condition="Window.IsActive(fullscreeninfo)">grey2</value>
+		<value>white</value>
+	</variable>
+
+	<variable name="SeekLabelVar">
+		<value condition="Player.IsTempo">$INFO[Player.Playspeed,$LOCALIZE[224]:[COLOR=themecolor] ,[/COLOR]]</value>
+		<value condition="!String.IsEmpty(Player.SeekStepSize)">$INFO[Player.SeekStepSize,$LOCALIZE[31046][COLOR=themecolor] ,[/COLOR]]</value>
+		<value condition="!String.IsEmpty(Player.SeekOffset)">$INFO[Player.SeekOffset,$LOCALIZE[31046][COLOR=themecolor] ,[/COLOR]]</value>
+		<value condition="Player.Caching + !Player.Seeking">$INFO[Player.CacheLevel,$LOCALIZE[15107] ,%]</value>
+	</variable>
+
+
+
+</includes>

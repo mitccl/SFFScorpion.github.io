@@ -15,12 +15,12 @@
   </extension>
 </addon>
 
-<addon id="plugin.video.scorpion" name="Scorpion" version="0.1.5" provider-name="Pick">
+<addon id="plugin.video.scorpion" name="Scorpion" version="0.1" provider-name="Pick">
 	<requires>
 		<import addon="xbmc.python" version="2.19.0" />
-		<import addon="script.module.scorpion" version="0.1"/>
-		<import addon="script.scorpion.artwork" version="0.1" />
-		<import addon="script.scorpion.metadata" version="0.1"/>
+		<import addon="script.module.scorpion"/>
+		<import addon="script.scorpion.artwork" />
+		<import addon="script.scorpion.metadata" />
 		<import addon="script.module.urlresolver" />
 		<import addon="script.module.requests" />
 		<import addon="script.module.metahandler" />
@@ -133,7 +133,7 @@
 		</extension>
 </addon>
 
-<addon id="skin.Scorpion" name="SCORPION" version="0.1" provider-name="Pick">
+<addon id="skin.Scorpion" name="SCORPION" version="18.1" provider-name="Pick">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 		<import addon="resource.images.studios.coloured"/>

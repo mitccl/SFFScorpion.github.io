@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">9021</defaultcontrol>
+	<onload>SetFocus(9021)</onload>
+	<controls>
+		<include>CommonBackground</include>
+		<include>WindowSlide</include>
+        <include>Topbar</include>
+		<control type="grouplist" id="9010">
+			<align>center</align>
+			<top>-3</top>
+			<itemgap>10</itemgap>
+			<width>scale</width>
+			<height>120</height>
+			<align>right</align>
+			<orientation>horizontal</orientation>
+			<control type="button" id="9011">
+				<width>70</width>
+				<height>70</height>
+				<align>center</align>
+				<ondown>9021</ondown>
+				<onright>9030</onright>
+				<onleft>9010</onleft>
+				<onclick>EjectTray()</onclick>
+				<visible>System.HasMediaDVD</visible>
+				<texturefocus>osd/topbar_ejectfo.png</texturefocus>
+				<texturenofocus>osd/topbar_eject.png</texturenofocus>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+				</animation>
+			</control>
+			<control type="button" id="9012">
+				<texturefocus>osd/topbar_playfo.png</texturefocus>
+				<texturenofocus>osd/topbar_play.png</texturenofocus>
+				<width>70</width>
+				<height>70</height>
+				<align>center</align>
+				<visible>System.HasMediaDVD</visible>
+				<onclick>PlayDVD</onclick>
+				<animation type="Visible">
+					<effect type="fade" start="0" end="100" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="50" end="100" center="auto" tween="sine" easing="inout" time="300" />
+				</animation>
+				<animation type="Hidden">
+					<effect type="fade" start="100" end="0" tween="sine" easing="inout" time="300" />
+					<effect type="zoom" start="100" end="50" center="auto" tween="sine" easing="inout" time="300" />
+				</animation>
+			</control>
+		</control>
+		<control type="grouplist" id="9020">
+			<itemgap>180</itemgap>
+			<align>center</align>
+			<top>790</top>
+			<width></width>
+			<orientation>horizontal</orientation>
+			<onup condition="System.HasMediaDVD">9010</onup>
+			<onup condition="!System.HasMediaDVD">9030</onup>
+			<include>WindowSlide</include>
+			<control type="button" id="9021">
+				<top>-20</top>
+				<width>400</width>
+				<height>135</height>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<visible>yes</visible>
+				<label>MOVIES</label>
+				<texturefocus border="0">homebutton.png</texturefocus>
+				<texturenofocus border="0">homebutton.png</texturenofocus>
+				<include>HomeZoom</include>
+				<onclick>ActivateWindow(Videos,"plugin://plugin.video.scorpion/?action=movieNavigator",return)</onclick>
+			</control>
+			<control type="button" id="9022">
+				<top>-20</top>
+				<width>400</width>
+				<height>135</height>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<visible>yes</visible>
+				<label>TV Shows</label>
+				<texturefocus border="0">homebutton.png</texturefocus>
+				<texturenofocus border="0">button.png</texturenofocus>
+				<include>HomeZoom</include>
+				<onclick>ActivateWindow(Videos,"plugin://plugin.video.scorpion/?action=tvNavigator",return)</onclick>
+			</control>
+			<control type="button" id="9023">
+				<top>-20</top>
+				<width>400</width>
+				<height>135</height>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<visible>yes</visible>
+				<label>Favourites</label>
+				<texturefocus border="0">homebutton.png</texturefocus>
+				<texturenofocus border="0">homebutton.png</texturenofocus>
+				<include>HomeZoom</include>
+				<onclick>ActivateWindow(Favourites)</onclick>
+			</control>
+		</control>
+
+	</controls>
+</window>

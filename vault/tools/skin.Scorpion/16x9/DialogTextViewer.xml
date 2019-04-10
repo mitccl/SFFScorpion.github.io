@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>61</defaultcontrol>
+	<include>WindowSlide</include>
+	<controls>
+		<control type="group">
+			<width>1380</width>
+			<height>904</height>
+			<centerleft>50%</centerleft>
+			<centertop>50%</centertop>
+			<control type="image">
+				<width>1380</width>
+				<height>904</height>
+				<texture border="40">65.png</texture>
+			</control>
+			<control type="label" id="1">
+				<description>header label</description>
+				<left>62</left>
+				<top>32</top>
+				<width>1256</width>
+				<height>40</height>
+				<font>font35</font>
+				<align>center</align>
+				<textcolor>grey3</textcolor>
+			</control>
+			<control type="textbox" id="5">
+				<description>textarea</description>
+				<left>62</left>
+				<top>72</top>
+				<width>1256</width>
+				<height>800</height>
+				<font>font35tb</font>
+				<textcolor>grey2</textcolor>
+			</control>
+		</control>
+	</controls>
+</window>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video InfoWall -->
+	<include name="InfoWall">
+		<control type="group">
+			<include>WindowSlide</include>
+			<control type="group">
+				<visible>[Control.IsVisible(51)]</visible>
+				<left>75</left>
+				<top>120</top>
+				<width>1060</width>
+				<height>930</height>
+				<include>SettingsBG</include>
+				<control type="panel" id="51">
+					<left>10</left>
+					<top>10</top>
+					<width>1050</width>
+					<height>900</height>
+					<onup>51</onup>
+					<ondown>51</ondown>
+					<onleft>1111</onleft>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic" easing="in" reversable="false">400</scrolltime>
+					<viewtype label="InfoPanel">panel</viewtype>
+					<itemlayout height="300" width="205">
+						<control type="image">
+							<width>200</width>
+							<height>300</height>
+							<aspectratio>keep</aspectratio>
+							<texture>65p.png</texture>
+							<bordersize>5</bordersize>
+						</control>
+						<control type="image">
+							<width>200</width>
+							<height>300</height>
+							<aspectratio>keep</aspectratio>
+							<texture diffuse="paneldif.png">$INFO[ListItem.Icon]</texture>
+							<bordersize>6</bordersize>
+						</control>
+						<control type="image">
+							<width>200</width>
+							<height>300</height>
+							<texture border="25">panel.png</texture>
+							<bordersize>5</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="300" width="205">
+						<control type="group">
+							<control type="image">
+								<width>200</width>
+								<height>300</height>
+								<aspectratio>keep</aspectratio>
+								<texture>65p.png</texture>
+								<bordersize>6</bordersize>
+							</control>
+							<control type="image">
+								<width>200</width>
+								<height>300</height>
+								<aspectratio>keep</aspectratio>
+								<texture diffuse="paneldif.png">$INFO[ListItem.Icon]</texture>
+								<bordersize>6</bordersize>
+							</control>
+							<control type="image">
+								<width>200</width>
+								<height>300</height>
+								<texture border="25">panel.png</texture>
+								<bordersize>5</bordersize>
+							</control>
+							<include>PanelZoom</include>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+
+			<!-- InfoPanel -->
+			<control type="group">
+				<right>50</right>
+				<top>114</top>
+				<width>680</width>
+				<height>936</height>
+				<control type="group">
+					<include>WindowSlide</include>
+					<visible>![Container.Content(episodes) | Window.IsActive(addoninformation) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser)]</visible>
+					<include>SettingsBG</include>
+					<control type="image">
+						<left>10</left>
+						<top>5</top>
+						<width>660</width>
+						<height>380</height>
+						<fadetime>IconFade</fadetime>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">65ls.png</texture>
+					</control>
+					<control type="image">
+						<left>10</left>
+						<top>5</top>
+						<width>660</width>
+						<height>380</height>
+						<fadetime>IconFade</fadetime>
+						<texture background="true" diffuse="51dif.png">$VAR[Image_Var]</texture>
+						<bordersize>5,15,5,10</bordersize>
+						<visible>!Window.IsActive(AddonBrowser)</visible>
+						<include>VizChange</include>
+					</control>
+					<control type="image">
+						<left>150</left>
+						<top>5</top>
+						<width>380</width>
+						<height>380</height>
+						<fadetime>IconFade</fadetime>
+						<aspectratio>keep</aspectratio>
+						<texture background="true" diffuse="addondif.png">$INFO[ListItem.Icon]</texture>
+						<!-- <bordersize>5,15,5,10</bordersize> -->
+						<visible>String.IsEmpty(ListItem.Art(fanart)) | String.IsEmpty(ListItem.Art(poster))</visible>
+						<include>VizChange</include>
+					</control>
+					<control type="image">
+						<right>40</right>
+						<top>300</top>
+						<width>80</width>
+						<height>55</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.MPAA,flags/mpaa/,.png]</texture>
+						<bordertexture colordiffuse="grey2">mpaa_box2.png</bordertexture>
+					</control>
+					<control type="image">
+						<left>40</left>
+						<top>300</top>
+						<width>100</width>
+						<height>70</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
+					</control>
+					<control type="label" id="5100">
+						<top>385</top>
+						<width>660</width>
+						<height>60</height>
+						<font>font40</font>
+						<scroll>true</scroll>
+						<scrollspeed>50</scrollspeed>
+						<textoffsetx>15</textoffsetx>
+						<visible>!Window.IsActive(AddonBrowser)</visible>
+						<label>$VAR[List_Var]</label>
+					</control>
+					<control type="label"> 
+						<left>20</left>
+						<top>450</top>
+						<width>640</width>
+						<height>80</height>
+						<font>font35r</font>
+						<label>$VAR[Label_InfoLine]</label>
+						<visible>!ListItem.IsParentFolder | String.Contains(ListItem.Label,next)</visible>
+					</control>
+					<control type="label">
+						<top>400</top>
+						<left>50</left>
+						<width>640</width>
+						<height>30</height>
+						<aligny>top</aligny>
+						<font>font40</font>
+						<textcolor>white2</textcolor>
+						<scroll>true</scroll>
+						<scrollspeed>125</scrollspeed>
+						<label>$INFO[ListItem.Label2]</label>
+						<visible>Window.IsActive(AddonBrowser)</visible>
+					</control>
+					<control type="label">
+						<top>480</top>
+						<left>50</left>
+						<width>580</width>
+						<height>400</height>
+						<aligny>top</aligny>
+						<font>font35</font>
+						<textcolor>white2</textcolor>
+						<wrapmultiline>true</wrapmultiline>
+						<label>$VAR[Addon_InfoLine]</label>
+					</control>
+					<control type="image">
+						<left>20</left>
+						<top>300</top>
+						<width>150</width>
+						<height>100</height>
+						<texture>$INFO[ListItem.MPAA]</texture>
+						<bordertexture>mpaa_box.png</bordertexture>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+					<control type="textbox">
+						<label>$INFO[ListItem.Plot]</label>
+						<top>545</top>
+						<left>40</left>
+						<width>600</width>
+						<height>360</height>
+						<aligny>center</aligny>
+						<font>font35tb</font>
+						<textcolor>white2</textcolor>
+						<autoscroll time="3000" delay="2500" repeat="5000" />
+						<pagecontrol>61</pagecontrol>
+					</control>
+					<!-- <control type="image"> -->
+					<!-- <bottom>20</bottom> -->
+					<!-- <left>10</left> -->
+					<!-- <width>660</width> -->
+					<!-- <height>380</height> -->
+					<!-- <texture>logo.png</texture> -->
+					<!-- <visible>String.IsEmpty(ListItem.Plot)</visible> -->
+					<!-- </control> -->
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

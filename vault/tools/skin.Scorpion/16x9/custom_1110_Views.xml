@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1110" type="dialog">
+	<onunload>SetFocus(50)</onunload>
+	<controls>
+		<control type="group">
+			<include>WindowSlide</include>
+			<left>970</left>
+			<top>120</top>
+			<width>860</width>
+			<height>930</height>
+			<include>SettingsBG</include>
+			<control type="label">
+				<left>45</left>
+				<top>10</top>
+				<width>400</width>
+				<height>52</height>
+				<textoffsetx>15</textoffsetx>
+				<font>font65</font>
+				<label>Choose view</label>
+				<textcolor>themecolor</textcolor>
+				<shadowcolor>black</shadowcolor>
+				<visible>String.IsEqual(Skin.String(Views),100%er)</visible>
+			</control>
+			<control type="list" id="1115">
+				<left>10</left>
+				<top>120</top>
+				<width>840</width>
+				<height>930</height>
+				<onleft>1112</onleft>
+				<itemlayout width="860" height="113">
+					<control type="label">
+						<width>400</width>
+						<height>113</height>
+						<font>font30</font>
+						<textoffsetx>45</textoffsetx>
+						<textcolor>white2</textcolor>
+						<shadowcolor>black</shadowcolor>
+						<selectedcolor>selected</selectedcolor>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout width="860" height="113">
+					<control type="group">
+						<control type="image">
+							<width>840</width>
+							<height>113</height>
+							<texture border="0">button.png</texture>
+						</control>
+						<control type="label">
+							<width>400</width>
+							<height>113</height>
+							<textoffsetx>45</textoffsetx>
+							<font>font30</font>
+							<textcolor>white</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<selectedcolor>selected</selectedcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+
+				</focusedlayout>
+				<content>
+					<item>
+						<label>535</label>
+						<onclick>Container.SetViewMode(50)</onclick>
+						<onclick>Dialog.Close(1110)</onclick>
+						<onclick>SetFocus(50)</onclick>
+					</item>
+					<item>
+						<label>InfoWall</label>
+						<onclick>Container.SetViewMode(51)</onclick>
+						<onclick>Dialog.Close(1110)</onclick>
+						<onclick>SetFocus(50)</onclick>
+					</item>
+					<item>
+						<label>Seasons</label>
+						<onclick>Container.SetViewMode(52)</onclick>
+						<onclick>Dialog.Close(1110)</onclick>
+						<onclick>SetFocus(50)</onclick>
+					</item>
+					<item>
+						<label>Episodes</label>
+						<onclick>Container.SetViewMode(53)</onclick>
+						<onclick>Dialog.Close(1110)</onclick>
+						<onclick>SetFocus(50)</onclick>
+					</item>
+					<item>
+						<label>Cancel</label>
+						<onclick>Dialog.Close(1110)</onclick>
+						<onclick>SetFocus(50)</onclick>
+					</item>
+				</content>
+			</control>
+		</control>
+
+			<control type="button" id="1112">
+				<left>-2000</left>
+				<width>1</width>
+				<height>1</height>
+				<onfocus>Dialog.Close(1110)</onfocus>
+				<onfocus>SetFocus(50)</onfocus>
+				<label />
+				<texturefocus />
+				<texturenofocus />
+			</control>
+	</controls>
+</window>
