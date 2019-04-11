@@ -7,7 +7,7 @@ ADDON_ID       = xbmcaddon.Addon().getAddonInfo('id')
 ADDONTITLE     = 'Scorpion Wizard'
 EXCLUDES       = [ADDON_ID, 'repository.scorpion']
 # Text File with build info in it.
-BUILDFILE      = 'https://sffscorpion.000webhostapp.com/vault/builds/scorpion-0.1.zip'
+BUILDFILE      = 'https://sffscorpion.000webhostapp.com/vault/docs/builds.txt'
 # How often you would list it to check for build updates in days
 # 0 being every startup of kodi
 UPDATECHECK    = 0
