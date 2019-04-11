@@ -133,7 +133,7 @@
 		</extension>
 </addon>
 
-<addon id="skin.Scorpion" name="SCORPION" version="18.1" provider-name="Pick">
+<addon id="skin.Scorpion" name="SCORPION" version="0.1" provider-name="Pick">
 	<requires>
 		<import addon="xbmc.gui" version="5.14.0"/>
 		<import addon="resource.images.studios.coloured"/>

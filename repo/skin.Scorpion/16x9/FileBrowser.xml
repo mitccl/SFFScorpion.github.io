@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>true</allowoverlay>
+	<controls>
+		<control type="group">
+			<left>75</left>
+			<top>120</top>
+			<width>1790</width>
+			<height>930</height>
+			<include>SettingsBG</include>
+			<include>WindowSlide</include>
+			<control type="label" id="412">
+				<description>Path label</description>
+				<label>1023</label>
+				<left>30</left>
+				<top>32</top>
+				<width>960</width>
+				<height>40</height>
+				<textoffsetx>15</textoffsetx>
+				<font>font50</font>
+				<textcolor>blue</textcolor>
+				<label>$LOCALIZE[13406]</label>
+				<align>center</align>
+				<animation effect="fade" start="0" end="100" time="250" delay="3000" condition="True">Conditional</animation>
+			</control>
+			<control type="group">
+				<left>30</left>
+				<top>86</top>
+				<width>960</width>
+				<include>WindowSlide</include>
+				<control type="list" id="450">
+					<left>0</left>
+					<top>9</top>
+					<width>1060</width>
+					<height>905</height>
+					<onright>9000</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="100" width="960">
+						<control type="label">
+							<width>960</width>
+							<height>60</height>
+							<font>font35</font>
+							<textoffsetx>15</textoffsetx>
+							<info>ListItem.Label</info>
+						</control>
+					</itemlayout>
+					<focusedlayout height="100" width="960">
+						<control type="group">
+							<control type="image">
+								<width>960</width>
+								<height>100</height>
+								<texture border="0">button.png</texture>
+							</control>
+							<control type="label">
+								<width>960</width>
+								<height>60</height>
+								<font>font35</font>
+								<textcolor>white</textcolor>
+								<textoffsetx>15</textoffsetx>
+								<selectedcolor>green</selectedcolor>
+								<info>ListItem.Label</info>
+							</control>
+							</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<left>1100</left>
+				<top>86</top>
+				<width>534</width>
+				<control type="grouplist" id="9000">
+					<left>50</left>
+					<top>9</top>
+					<width>1060</width>
+					<height>905</height>
+					<orientation>vertical</orientation>
+					<onleft>450</onleft>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="413">
+						<description>OK button</description>
+						<width>534</width>
+						<height>100</height>
+						<label>186</label>
+					</control>
+					<control type="button" id="414">
+						<description>Cancel button</description>
+						<height>100</height>
+						<label>222</label>
+						<width>534</width>
+					</control>
+					<control type="button" id="415">
+						<height>100</height>
+						<description>Create folder button</description>
+						<label>119</label>
+						<width>534</width>
+					</control>
+					<control type="radiobutton" id="416">
+						<height>100</height>
+						<description>Flip Image button</description>
+						<radioposx>460</radioposx>
+						<width>534</width>
+						<label>749</label>
+					</control>
+				</control>
+			</control>
+
+		</control>
+	</controls>
+</window>
