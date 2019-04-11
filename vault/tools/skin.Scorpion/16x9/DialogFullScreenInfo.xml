@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <window>
-	<onload condition="[VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)]">SetFocus(5000)</onload>
-	<onload condition="VideoPlayer.Content(livetv)">SetFocus(64)</onload>
-	<!-- this switches back to "You are watching ..." -->
+	<onload>SetFocus(5000)</onload>
 	<controls>
 		<control type="group">
-			<!-- <visible>VideoPlayer.Content(movies) | VideoPlayer.Content(episodes)</visible> -->
 			<control type="image">
 				<width>100%</width>
 				<height>510</height>
@@ -14,15 +11,12 @@
 			<animation effect="slide" end="0,0" start="0,-540" time="200" tween="quadratic" easing="out">WindowOpen</animation>
 			<animation effect="slide" start="0,0" end="0,-540" time="200" tween="quadratic" easing="out">WindowClose</animation>
 			<control type="group">
-				<!-- <visible>VideoPlayer.Content(movies)</visible> -->
 				<control type="image">
 					<width>338</width>
 					<height>508</height>
 					<aspectratio align="left">keep</aspectratio>
 					<texture background="true">$INFO[Player.Art(poster)]</texture>
 					<fadetime>400</fadetime>
-					<bordertexture border="1,1,2,1">65.png</bordertexture>
-					<bordersize>1,1,2,1</bordersize>
 				</control>
 				<control type="grouplist">
 					<left>340</left>
@@ -101,13 +95,12 @@
 					<width>260</width>
 					<include>MediaFlagVars</include>
 					<bordersize>2</bordersize>
-					<texture fallback="flags/studios/default-studio.png">$VAR[Studio]</texture>
+					<texture fallback="flags/studios/default-studio.png">$INFO[VideoPlayer.Studio,resource://resource.images.studios.coloured/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>
-					<colordiffuse>grey2</colordiffuse>
 					<include>MediaFlagVars</include>
-					<texture fallback="flags/mpaa/NR.png">$INFO[ListItem.MPAA,flags/mpaa/,.png]</texture>
+					<texture fallback="flags/mpaa/NR.png">$INFO[VideoPlayer.MPAA,flags/mpaa/,.png]</texture>
 				</control>
 				<control type="image">
 					<width>260</width>

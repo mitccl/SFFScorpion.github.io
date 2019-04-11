@@ -92,16 +92,5 @@
 				</content>
 			</control>
 		</control>
-
-			<control type="button" id="1112">
-				<left>-2000</left>
-				<width>1</width>
-				<height>1</height>
-				<onfocus>Dialog.Close(1110)</onfocus>
-				<onfocus>SetFocus(50)</onfocus>
-				<label />
-				<texturefocus />
-				<texturenofocus />
-			</control>
 	</controls>
 </window>

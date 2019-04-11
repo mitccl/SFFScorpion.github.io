@@ -3,7 +3,7 @@
 	<include name="SeasonList">
 		<control type="group">
 			<include>WindowSlide</include>
-			<visible>Control.IsVisible(52) +!Window.IsActive(selectdialog)</visible>
+			<visible>Control.IsVisible(52) + !Window.IsActive(selectdialog)</visible>
 			<control type="image">
 				<width>100%</width>
 				<height>100%</height>
@@ -11,16 +11,12 @@
 			</control>
 <!-- arrows -->
 			<control type="group">
-				<control type="button" id="6100">
+				<control type="image">
 					<left>15</left>
 					<top>185</top>
 					<width>110</width>
 					<height>200</height>
-					<onclick>pagedown(6600)</onclick>
-					<label />
-					<texturefocus>arrow_L.png</texturefocus>
-					<texturenofocus>arrow_L.png</texturenofocus>
-					<!-- <visible>String.Contains(Container(51).ListItemAbsolute(1).FolderPath,add) + String.IsEqual(Skin.String(Views),100%er)</visible> -->
+					<texture>arrow_L.png</texture>
 				</control>
 				<control type="image">
 					<right>15</right>
@@ -55,7 +51,6 @@
 					<focusposition>2</focusposition>
 					<viewtype label="Seasons">list</viewtype>
 					<preloaditems>2</preloaditems>
-					<visible>Container.Content(seasons)</visible>
 					<scrolltime tween="sine" easing="inout" reversable="false">400</scrolltime>
 					<itemlayout height="390" width="340" condition="Container.Content(seasons)">
 						<control type="group">
@@ -77,18 +72,18 @@
 								<height>350</height>
 								<texture border="10">panel.png</texture>
 							</control>
-							<control type="label">
-								<left>-50</left>
-								<top>295</top>
-								<height>50</height>
-								<width>350</width>
-								<align>center</align>
-								<font>font40</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>black</shadowcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!ListItem.IsParentFolder</visible>
-							</control>
+							<!-- <control type="label"> -->
+								<!-- <left>-50</left> -->
+								<!-- <top>295</top> -->
+								<!-- <height>50</height> -->
+								<!-- <width>350</width> -->
+								<!-- <align>center</align> -->
+								<!-- <font>font40</font> -->
+								<!-- <textcolor>white</textcolor> -->
+								<!-- <shadowcolor>black</shadowcolor> -->
+								<!-- <label>$INFO[ListItem.Label]</label> -->
+								<!-- <visible>!ListItem.IsParentFolder</visible> -->
+							<!-- </control> -->
 						</control>
 
 					</itemlayout>
@@ -113,18 +108,18 @@
 								<height>350</height>
 								<texture border="10">panel.png</texture>
 							</control>
-							<control type="label">
-								<left>-50</left>
-								<top>295</top>
-								<height>50</height>
-								<width>350</width>
-								<align>center</align>
-								<font>font40</font>
-								<textcolor>white</textcolor>
-								<shadowcolor>black</shadowcolor>
-								<label>$INFO[ListItem.Label]</label>
-								<visible>!ListItem.IsParentFolder</visible>
-							</control>
+							<!-- <control type="label"> -->
+								<!-- <left>-50</left> -->
+								<!-- <top>295</top> -->
+								<!-- <height>50</height> -->
+								<!-- <width>350</width> -->
+								<!-- <align>center</align> -->
+								<!-- <font>font40</font> -->
+								<!-- <textcolor>white</textcolor> -->
+								<!-- <shadowcolor>black</shadowcolor> -->
+								<!-- <label>$INFO[ListItem.Label]</label> -->
+								<!-- <visible>!ListItem.IsParentFolder</visible> -->
+							<!-- </control> -->
 						</control>
 
 					</focusedlayout>
@@ -136,7 +131,6 @@
 				<top>620</top>
 				<width>1220</width>
 				<height>440</height>
-				<visible>!Window.IsActive(progressdialog) + Container.Content(seasons)</visible>
 				<control type="image">
 					<left>50</left>
 					<height>440</height>
@@ -167,8 +161,8 @@
 					<preloaditems>2</preloaditems>
 					<pagecontrol>6600</pagecontrol>
 					<scrolltime easing="out" tween="quadratic">300</scrolltime>
-					<content>$INFO[Container.ListItem.FolderPath]</content>
-					<visible allowhiddenfocus="false">![Container(52).ListItem.IsParentFolder + Control.IsVisible(50)]</visible>
+					<content>$INFO[Container(52).ListItem.FolderPath]</content>
+					<visible>![Container(52).ListItem.IsParentFolder]</visible>
 					<include>VizChange</include>
 					<itemlayout height="140" width="1200">
 						<control type="group">
@@ -268,18 +262,6 @@
 					</focusedlayout>
 				</control>
 			</control>
-				<control type="button" id="5200">
-					<left>10</left>
-					<top>490</top>
-					<width>50</width>
-					<height>100</height>
-					<onfocus>SetFocus(50)</onfocus>
-					<label />
-					<texturefocus />
-					<texturenofocus>arrow_l.png</texturenofocus>
-					<!-- <visible>String.Contains(Container.ListItemAbsolute(1).FolderPath,add) + String.IsEqual(Skin.String(Views),100%er)</visible> -->
-					<animation effect="fade" start="100" end="0" time="500" delay="1000" reversible="false" pulse="true" condition="true">Conditional</animation>
-				</control>
 		</control>
 	</include>
 </includes>

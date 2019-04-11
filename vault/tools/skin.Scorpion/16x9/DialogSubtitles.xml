@@ -95,7 +95,7 @@
 				<top>88</top>
 				<width>1262</width>
 				<height>540</height>
-				<onleft>121</onleft>
+				<onleft>150</onleft>
 				<onright>150</onright>
 				<onup>120</onup>
 				<ondown>120</ondown>
@@ -182,6 +182,7 @@
 						<control type="image">
 							<width>1262</width>
 							<height>90</height>
+							<visible>Control.HasFocus(120)</visible>
 							<texture border="0">button.png</texture>
 						</control>
 						<control type="image">
@@ -274,17 +275,13 @@
 					<viewtype label="535">button</viewtype>
 					<scrolltime tween="quadratic" easing="out">200</scrolltime>
 					<itemlayout width="400" height="90">
-						<control type="image">
-							<width>400</width>
-							<height>90</height>
-							<texture border="40">button.png</texture>
-						</control>
 						<control type="label">
 							<width>400</width>
 							<height>90</height>
 							<textoffsetx>15</textoffsetx>
 							<font>font35</font>
-							<textcolor>grey2</textcolor>
+							<textcolor>white2</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>
@@ -294,6 +291,7 @@
 						<control type="image">
 							<width>400</width>
 							<height>90</height>
+							<visible>Control.HasFocus(150)</visible>
 							<texture border="0">button.png</texture>
 						</control>
 						<control type="label">
@@ -301,6 +299,8 @@
 							<height>90</height>
 							<textoffsetx>15</textoffsetx>
 							<font>font35</font>
+							<textcolor>white2</textcolor>
+							<shadowcolor>black</shadowcolor>
 							<selectedcolor>selected</selectedcolor>
 							<info>ListItem.Label</info>
 						</control>

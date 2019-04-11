@@ -116,57 +116,61 @@
 				<texture border="1">separator2.png</texture>
 			</control>
 			<control type="group">
-				<left>552</left>
-				<top>754</top>
+				<left>540</left>
+				<top>780</top>
 				<control type="label" id="52">
 					<description>XBMC BUILD Version</description>
-					<left>-15</left>
-					<width>658</width>
+					<width>500</width>
 					<height>115</height>
 					<label>144</label>
 					<textcolor>themecolor</textcolor>
+					<shadowcolor>white</shadowcolor>
 					<wrapmultiline>true</wrapmultiline>
+					<scroll></scroll>
 					<font>font35</font>
 				</control>
-				<control type="label">
-					<description>CPU Text</description>
-					<left>630</left>
-					<top>20</top>
-					<width>240</width>
-					<height>24</height>
-					<label>$LOCALIZE[13271]</label>
-					<align>right</align>
-					<textcolor>grey2</textcolor>
-					<font>font25</font>
-				</control>
-				<control type="progress">
-					<description>CPU BAR</description>
-					<left>880</left>
-					<top>20</top>
-					<width>380</width>
-					<height>24</height>
-					<info>System.CPUUsage</info>
-					<texturebg border="2">osd/texturebg2.png</texturebg>
-				</control>
-				<control type="label">
-					<description>Memory Text</description>
-					<left>510</left>
-					<top>70</top>
-					<width>360</width>
-					<height>24</height>
-					<label>$LOCALIZE[31309]</label>
-					<align>right</align>
-					<textcolor>grey2</textcolor>
-					<font>font25</font>
-				</control>
-				<control type="progress">
-					<description>Memory BAR</description>
-					<left>880</left>
-					<top>70</top>
-					<width>380</width>
-					<height>24</height>
-					<texturebg border="2">osd/texturebg2.png</texturebg>
-					<info>system.memory(used)</info>
+				<control type="group">
+					<left>40</left>
+					<control type="label">
+						<description>CPU Text</description>
+						<left>560</left>
+						<top>20</top>
+						<width>260</width>
+						<height>24</height>
+						<label>CPU Usage:</label>
+						<align>right</align>
+						<font>font30</font>
+					</control>
+					<control type="progress">
+						<description>CPU BAR</description>
+						<left>830</left>
+						<top>20</top>
+						<width>380</width>
+						<height>24</height>
+						<info>System.CPUUsage</info>
+						<texturebg border="2">osd/texturebg2.png</texturebg>
+						<midtexture>osd/midtexture_cache.png</midtexture>
+					</control>
+					<control type="label">
+						<description>Memory Text</description>
+						<left>560</left>
+						<top>70</top>
+						<width>260</width>
+						<height>24</height>
+						<align>right</align>
+						<label>Memory Usage:</label>
+						<font>font30</font>
+					</control>
+					<control type="progress">
+						<description>Memory BAR</description>
+						<left>830</left>
+						<top>70</top>
+						<width>380</width>
+						<height>24</height>
+						<texturebg border="2">osd/texturebg2.png</texturebg>
+						<midtexture>osd/midtexture_cache.png</midtexture>
+						<info>system.memory(used)</info>
+					</control>
 				</control>
 			</control>
 			<control type="grouplist" id="9001">
@@ -297,7 +301,6 @@
 				<height max="720">auto</height>
 				<label />
 				<font>font35tb</font>
-				<textcolor>grey2</textcolor>
 				<shadowcolor>shadow</shadowcolor>
 				<visible>!String.IsEmpty(Control.GetLabel(30))</visible>
 			</control>

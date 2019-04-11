@@ -44,6 +44,15 @@
 					<onleft>202</onleft>
 					<onright>202</onright>
 					<visible>!VideoPlayer.Content(LiveTV)</visible>
+					<control type="button" id="800">
+						<texturefocus>osd/buttons/OSDAudioFO.png</texturefocus>
+						<texturenofocus>osd/buttons/OSDAudioNF.png</texturenofocus>
+						<label />
+						<width>120</width>
+						<height>100</height>
+						<font />
+						<onclick>ActivateWindow(osdaudiosettings)</onclick>
+					</control>
 					<control type="button" id="703">
 						<texturefocus>osd/buttons/OSDSubtitlesFO.png</texturefocus>
 						<texturenofocus>osd/buttons/OSDSubtitlesNF.png</texturenofocus>

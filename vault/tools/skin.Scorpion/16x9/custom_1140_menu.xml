@@ -6,7 +6,7 @@
 			<right>100</right>
 			<top>200</top>
 			<width>430</width>
-			<height>265</height>
+			<height>340</height>
 			<include>WindowSlide</include>
 			<include>SettingsBG</include>
 			<control type="grouplist" id="550">
@@ -54,6 +54,19 @@
 					<onclick>Dialog.Close(1140)</onclick>
 					<onclick>ActivateWindow(Filemanager)</onclick>
 					<label>FILEMANAGER</label>
+					<visible>yes</visible>
+				</control>
+				<control type="button" id="554">
+					<description>refresh</description>
+					<font>font35B</font>
+					<width>410</width>
+					<height>80</height>
+					<align>center</align>
+					<textwidth>435</textwidth>
+					<textoffsetx>45</textoffsetx>
+					<onclick>Dialog.Close(1140)</onclick>
+					<onclick>SkinRefresh</onclick>
+					<label>Skin Refresh</label>
 					<visible>yes</visible>
 				</control>
 			</control>

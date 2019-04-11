@@ -80,7 +80,7 @@
 					<label />
 					<texturefocus />
 					<texturenofocus>arrow_l.png</texturenofocus>
-					<visible>String.Contains(Container.ListItemAbsolute(1).FolderPath,add) + String.IsEqual(Skin.String(Views),100%er)</visible>
+					<visible>String.Contains(Container.ListItemAbsolute(1).Label,CLICK) + String.IsEqual(Skin.String(Views),100%er)</visible>
 					<animation effect="fade" start="100" end="0" time="500" delay="1000" reversible="false" pulse="true" condition="true">Conditional</animation>
 				</control>
 			<control type="button" id="9030">
@@ -158,66 +158,6 @@
 					<label>$INFO[Player.Title]</label>
 					<visible>Player.HasVideo</visible>
 				</control>
-			</control>
-		</control>
-	</include>
-
-	<include name="AutoComplete">
-		<control type="group">
-			<animation effect="fade" start="100" end="0" time="300" condition="String.IsEmpty(Container(5000).ListItem.Label)">conditional</animation>
-			<visible>!System.HasHiddenInput</visible>
-			<control type="image">
-				<description>background image</description>
-				<top>540</top>
-				<width>1340</width>
-				<height>220</height>
-				<texture border="40">65w.png</texture>
-			</control>
-			<control type="panel" id="5000">
-				<left>30</left>
-				<top>572</top>
-				<width>1280</width>
-				<height>160</height>
-				<onleft>5000</onleft>
-				<onright>5000</onright>
-				<onup>4000</onup>
-				<ondown>4000</ondown>
-				<onback>noop</onback>
-				<orientation>vertical</orientation>
-				<scrolltime tween="quadratic" easing="out">200</scrolltime>
-				<itemlayout height="80" width="320">
-					<control type="image">
-						<width>320</width>
-						<height>80</height>
-						<texture>divider.png</texture>
-					</control>
-					<control type="label">
-						<width>320</width>
-						<height>80</height>
-						<align>center</align>
-						<font>font35</font>
-						<label>$INFO[ListItem.Label]</label>
-					</control>
-				</itemlayout>
-				<focusedlayout height="80" width="320">
-					<control type="group">
-						<control type="image">
-							<width>320</width>
-							<height>80</height>
-							<texture border="4">65ls.png</texture>
-						</control>
-						<control type="label">
-							<width>320</width>
-							<height>80</height>
-							<align>center</align>
-							<textcolor>white</textcolor>
-							<shadowcolor>black</shadowcolor>
-							<font>font35</font>
-							<label>$INFO[ListItem.Label]</label>
-						</control>
-					</control>
-				</focusedlayout>
-				<content>plugin://plugin.program.autocompletion?info=autocomplete&amp;&amp;id=$INFO[Control.GetLabel(312).index(1)]&amp;&amp;limit=8</content>
 			</control>
 		</control>
 	</include>
