@@ -9,7 +9,7 @@
   <extension point="xbmc.service" library="startup.py" start="startup" />
   <extension point="xbmc.addon.metadata">
     <summary lang="en">Scorpion Wizard</summary>
-    <description lang="en">GET SOME!</description>
+    <description lang="en">Get Some!</description>
     <platform>all</platform>
   </extension>
 </addon>
