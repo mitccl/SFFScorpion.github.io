@@ -94,7 +94,7 @@ REPOID         = 'repository.scorpion'
 # Url to Addons.xml file in your repo folder(this is so we can get the latest version)
 REPOADDONXML   = 'https://sffscorpion.github.io/repo/repository.scorpion/addon.xml'
 # Url to folder zip is located in
-REPOZIPURL     = 'https://sffscorpion.github.io/repo'
+REPOZIPURL     = 'https://sffscorpion.github.io/repo/'
 #########################################################
 
 #########################################################
