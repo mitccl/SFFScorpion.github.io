@@ -61,7 +61,7 @@
 						<width>900</width>
 						<textcolor>white</textcolor>
 						<shadowcolor>white</shadowcolor>
-						<label>$INFO[Container(3).Position]</label>
+						<label>$INFO[ListItem.Label]</label>
 						<visible>!ListItem.IsParentFolder</visible>
 					</control>
 				</focusedlayout>
