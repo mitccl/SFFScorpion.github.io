@@ -61,9 +61,9 @@
 		<import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
 	<extension point="xbmc.addon.repository" name="Scorpion Repository">
-		<info compressed="false">https://sffscorpion.com/addons/addons.xml</info>
-		<checksum>https://sffscorpion.com/addons/addons.xml.md5</checksum>
-		<datadir zip="true">https://sffscorpion.com/addons</datadir>
+		<info compressed="false">https://sffscorpion.github.io/repo/addons.xml</info>
+		<checksum>https://sffscorpion.github.io/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://sffscorpion.github.io/repo</datadir>
 		<hashes>false</hashes>
 	</extension>
 	<extension point="xbmc.addon.metadata">
