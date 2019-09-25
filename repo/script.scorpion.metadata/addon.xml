@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.scorpion.metadata" version="1.0" name="Scorpion Metadata" provider-name="Pick">
+	<requires>
+		<import addon="xbmc.python" version="2.26.0"/>
+	</requires>
+	<extension point="xbmc.python.module" library="lib" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Scorpion: The very best in van candy.</summary>
+		<description>Freshness Guaranteed</description>
+        <disclaimer lang="en">The author of this addon does not give a f--ck what you do.</disclaimer>
+		<platform>all</platform>
+	</extension>
+</addon>
