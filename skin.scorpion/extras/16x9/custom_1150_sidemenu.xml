@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window id="1150">
+	<defaultcontrol always="true">1151</defaultcontrol>
+	<controls>
+		<control type="group"> <!--movies-->
+			<!-- <visible>Skin.HasSetting(movies)</visible> -->
+			<top>450</top>
+			<width>100%</width>
+			<height>540</height>
+			<control type="label">
+				<top>20</top>
+				<width>100%</width>
+				<height>40</height>
+				<font>font60</font>
+				<label>Scorpion Movies</label>
+				<textcolor>green</textcolor>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+				<!-- <visible>Skin.HasSetting(movies)</visible> -->
+			</control>
+			<control type="wraplist" id="1151">
+				<centerleft>50%</centerleft>
+				<top>130</top>
+				<width>1560</width>
+				<height>350</height>
+				<onup>9020</onup>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout" reversable="false">400</scrolltime>
+				<itemlayout height="350" width="260">
+					<control type="image">
+						<width>233</width>
+						<height>350</height>
+						<texture background="true" colordiffuse="dark">100.png</texture>
+						<bordersize>7</bordersize>
+					</control>
+					<control type="image">
+						<width>233</width>
+						<height>350</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordersize>0</bordersize>
+					</control>
+					<control type="label">
+						<top>250</top>
+						<width>233</width>
+						<height>50</height>
+						<align>center</align>
+						<textcolor>grey2</textcolor>
+						<font>fon25r</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="350" width="260">
+					<control type="group">
+						<control type="image">
+							<width>233</width>
+							<height>350</height>
+							<texture background="true" colordiffuse="dark">100.png</texture>
+							<bordersize>2</bordersize>
+						</control>
+						<control type="image">
+							<width>233</width>
+							<height>350</height>
+							<texture background="true" colordiffuse="mid">100.png</texture>
+							<bordertexture border="5" colordiffuse="green">panel.png</bordertexture>
+							<bordersize>2</bordersize>
+							<visible>Control.HasFocus(9900)</visible>
+						</control>
+						<control type="image">
+							<width>233</width>
+							<height>350</height>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+						</control>
+						<control type="label">
+							<top>250</top>
+							<width>233</width>
+							<height>50</height>
+							<align>center</align>
+							<textcolor>grey2</textcolor>
+							<font>fon25r</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<include>PanelZoom</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<content>
+				<item id="1"> <!--years-->
+					<label>Years</label>
+					<icon>home/years.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieYears&quot;,return)</onclick>					
+				</item>	
+				<item id="2"> <!--search-->
+					<label>Search</label>
+					<icon>home/search.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieSearch&quot;,return)</onclick>					
+				</item>	
+				<item id="3"> <!--most pop-->
+					<label>Most Popular</label>
+					<icon>home/most-popular.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=popular&quot;,return)</onclick>					
+				</item>	
+				<item id="4"> <!--new-->
+					<label>New Movies</label>
+					<icon>home/new-movies.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=featured&quot;,return)</onclick>					
+				</item>	
+				<item id="5"> <!--genres-->
+					<label>Genres</label>
+					<icon>home/genres.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieGenres&quot;,return)</onclick>					
+				</item>	
+				<item id="6"> <!--voted-->
+					<label>Most Voted</label>
+					<icon>home/most-voted.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=moviesurl=views&quot;,return)</onclick>					
+				</item>	
+			</content>			
+		</control>
+	</controls>
+</window>

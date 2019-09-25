@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<allowoverlay>true</allowoverlay>
+	<controls>
+		<control type="group">
+			<left>75</left>
+			<top>120</top>
+			<width>1060</width>
+			<height>930</height>
+			<include>WindowSlide</include>
+			<include>ContextBG</include>
+			<control type="label" id="412">
+				<description>Path label</description>
+				<label>1023</label>
+				<left>30</left>
+				<!-- <top>10</top> -->
+				<width>960</width>
+				<height>40</height>
+				<textoffsetx>15</textoffsetx>
+				<font>font50</font>
+				<textcolor>green</textcolor>
+				<label>$LOCALIZE[13406]</label>
+				<align>center</align>
+				<animation effect="fade" start="0" end="100" time="250" delay="3000" condition="True">Conditional</animation>
+			</control>
+			<control type="group">
+				<left>30</left>
+				<top>86</top>
+				<width>960</width>
+				<include>WindowSlide</include>
+				<control type="list" id="450">
+					<left>0</left>
+					<top>9</top>
+					<width>1060</width>
+					<height>805</height>
+					<onright>9000</onright>
+					<onup>450</onup>
+					<ondown>450</ondown>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<itemlayout height="113" width="1020">
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>1000</width>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>900</width>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="113" width="1030">
+						<control type="image">
+							<left>20</left>
+							<width>1010</width>
+							<height>113</height>
+							<include>FOScroll</include>
+							<texture colordiffuse="green">button.png</texture>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>1000</width>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>50</left>
+							<top>10</top>
+							<width>930</width>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<left>1100</left>
+				<top>86</top>
+				<width>534</width>
+				<control type="grouplist" id="9000">
+					<left>50</left>
+					<top>9</top>
+					<width>1060</width>
+					<height>905</height>
+					<orientation>vertical</orientation>
+					<onleft>450</onleft>
+					<onup>9000</onup>
+					<ondown>9000</ondown>
+					<itemgap>1</itemgap>
+					<control type="button" id="413">
+						<description>OK button</description>
+						<width>534</width>
+						<height>100</height>
+						<label>186</label>
+					</control>
+					<control type="button" id="414">
+						<description>Cancel button</description>
+						<height>100</height>
+						<label>222</label>
+						<width>534</width>
+					</control>
+					<control type="button" id="415">
+						<height>100</height>
+						<description>Create folder button</description>
+						<label>119</label>
+						<width>534</width>
+					</control>
+					<control type="radiobutton" id="416">
+						<height>100</height>
+						<description>Flip Image button</description>
+						<radioposx>460</radioposx>
+						<width>534</width>
+						<label>749</label>
+					</control>
+				</control>
+			</control>
+
+		</control>
+	</controls>
+</window>

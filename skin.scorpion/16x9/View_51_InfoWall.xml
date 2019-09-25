@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video InfoWall -->
+	<include name="InfoWall">
+		<control type="group">
+			<visible>!Container.IsUpdating + Control.IsVisible(51)</visible>
+			<include>WindowSlide</include>
+			<control type="group">
+				<control type="panel" id="51">
+					<top>230</top>
+					<left>80</left>
+					<width>1050</width>
+					<height>600</height>
+					<onup>51</onup>
+					<ondown>51</ondown>
+					<onleft condition="![String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">9801</onleft>
+					<onleft condition="[String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">1111</onleft>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic" easing="in" reversable="false">300</scrolltime>
+					<viewtype label="InfoPanel">panel</viewtype>
+					<itemlayout height="310" width="210" condition="Container.Content(movies)">
+						<control type="image">
+							<height>285</height>
+							<width>195</width>
+							<texture colordiffuse="dark">100.png</texture>
+							<bordersize>4</bordersize>
+						</control>
+						<control type="image">
+							<height>285</height>
+							<width>195</width>
+							<texture>$VAR[Image_Var]</texture>
+							<bordersize>4</bordersize>
+							<bordertexture border="5" colordiffuse="light">panel.png</bordertexture>
+						</control>
+					</itemlayout>
+					<focusedlayout height="310" width="210" condition="Container.Content(movies)">
+						<control type="image">
+							<height>285</height>
+							<width>195</width>
+							<texture colordiffuse="dark">100.png</texture>
+							<include>PanelZoom</include>
+							<bordersize>4</bordersize>
+						</control>
+						<control type="image">
+							<height>285</height>
+							<width>195</width>
+							<texture>$VAR[Image_Var]</texture>
+							<bordersize>4</bordersize>
+							<bordertexture colordiffuse="green">100.png</bordertexture>
+							<include>PanelZoom</include>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+
+			<!-- InfoPanel -->
+			<control type="group">
+				<include>WindowSlide</include>
+				<visible>![Container.Content(episodes) | Window.IsActive(addoninformation) | Window.IsActive(addonsettings) | Window.IsActive(filebrowser)]</visible>
+				<control type="label">
+					<top>105</top>
+					<width>100%</width>
+					<height>30</height>
+					<align>center</align>
+					<font>font60</font>
+					<textcolor>green</textcolor>
+					<textoffsetx>15</textoffsetx>
+					<label>$VAR[List_Var]</label>
+				</control>
+				<control type="group">
+					<top>230</top>
+					<height>383</height>
+					<visible>!Container.IsUpdating | Control.IsVisible(51)</visible>
+					<control type="image">
+						<left>1160</left>
+						<width>680</width>
+						<height>383</height>
+						<fadetime>IconFade</fadetime>
+						<aspectratio>keep</aspectratio>
+						<texture background="true" fallback="fallback.png">$VAR[Panel_Var]</texture>
+						<bordersize>5</bordersize>
+						<bordertexture border="5">ls.png</bordertexture>
+					</control>
+					<control type="image">
+						<left>1725</left>
+						<bottom>10</bottom>
+						<width>100</width>
+						<height>42</height>
+						<align>right</align>
+						<aspectratio>keep</aspectratio>
+						<texture fallback="flags/mpaa/nr.png">$INFO[ListItem.MPAA,flags/mpaa/,.png]</texture>
+						<visible>![ListItem.IsParentFolder | String.Contains(ListItem.Label,Next)] + Control.IsVisible(51)</visible>
+					</control>
+					<control type="image">
+						<left>1170</left>
+						<bottom>10</bottom>
+						<width>100</width>
+						<height>70</height>
+						<aspectratio>keep</aspectratio>
+						<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
+					</control>
+				</control>
+				<control type="grouplist"> 
+					<left>1155</left>
+					<top>660</top>
+					<height>135</height>
+					<itemgap>20</itemgap>
+					<visible>![container.IsUpdating | ListItem.IsParentFolder | String.Contains(ListItem.Label,next)]</visible>
+					<control type="label"> 
+						<width>680</width>
+						<height min="35" max="80">auto</height>
+						<align>center</align>
+						<aligny>center</aligny>
+						<wrapmultiline>true</wrapmultiline>
+						<font>font35r</font>
+						<label>$INFO[ListItem.Genre]</label>
+					</control>
+					<control type="label"> 
+						<width>680</width>
+						<height>35</height>
+						<align>center</align>
+						<font>font35</font>
+						<label>$VAR[Label_InfoLine]</label>
+					</control>
+					<control type="image">
+						<left>550</left>
+						<top>810</top>
+						<width>100</width>
+						<height>45</height>
+						<texture background="true">dnarrow.png</texture>
+						<visible>Container.HasNext(4500)</visible>
+					</control>	
+				</control>
+				<control type="textbox">
+					<label>$INFO[ListItem.Plot]</label>
+					<left>200</left>
+					<top>860</top>
+					<width>1520</width>
+					<height>180</height>
+					<align>justify</align>
+					<aligny>center</aligny>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

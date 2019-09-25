@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>3</defaultcontrol>
+	<controls>
+<!-- List 3 -->
+		<control type="group" id="33">
+			<left>75</left>
+			<top>120</top>
+			<width>1060</width>
+			<height>930</height>
+			<include>ContextBG</include>
+			<visible>Control.IsVisible(3)</visible>
+			<include>WindowSlide</include>
+			<control type="panel" id="3">
+				<left>0</left>
+				<top>9</top>
+				<width>1060</width>
+				<height>790</height>
+				<onup>3</onup>
+				<ondown>9001</ondown>
+				<onleft>1111</onleft>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="113" width="1020">
+					<control type="label">
+						<left>50</left>
+						<top>10</top>
+						<width>1000</width>
+						<label>BACK</label>
+						<shadowcolor>white</shadowcolor>
+						<visible>ListItem.IsParentFolder</visible>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>10</top>
+						<width>900</width>
+						<shadowcolor>white</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+				</itemlayout>
+				<focusedlayout height="113" width="1020">
+					<control type="image">
+						<left>20</left>
+						<width>1010</width>
+						<height>113</height>
+						<texture border="5">button.png</texture>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>10</top>
+						<width>1000</width>
+						<label>BACK</label>
+						<textcolor>white</textcolor>
+						<shadowcolor>white</shadowcolor>
+						<visible>ListItem.IsParentFolder</visible>
+					</control>
+					<control type="label">
+						<left>50</left>
+						<top>10</top>
+						<width>900</width>
+						<textcolor>white</textcolor>
+						<shadowcolor>white</shadowcolor>
+						<label>$INFO[ListItem.Label]</label>
+						<visible>!ListItem.IsParentFolder</visible>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="9001">
+				<orientation>horizontal</orientation>
+				<top>830</top>
+				<left>50</left>
+				<width>960</width>
+				<height>80</height>
+				<ondown>3</ondown>
+				<onup>3</onup>
+				<itemgap>40</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="button" id="5">
+					<description>Manual button</description>
+					<width>460</width>
+					<height>80</height>
+					<label>186</label>
+					<align>center</align>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus border="5">button.png</texturefocus>
+					<texturenofocus border="5">btnframe.png</texturenofocus>
+				</control>
+				<control type="button" id="7">
+					<description>Cancel button</description>
+					<width>460</width>
+					<height>80</height>
+					<label>186</label>
+					<align>center</align>
+					<focusedcolor>label</focusedcolor>
+					<texturefocus border="5">button.png</texturefocus>
+					<texturenofocus border="5">btnframe.png</texturenofocus>
+				</control>
+			</control>
+		</control>
+
+<!-- List 6-->
+		<control type="group">
+			<left>445</left>
+			<width>1000</width>
+			<height>640</height>
+			<top>270</top>
+			<visible>Control.IsVisible(6)</visible>
+			<include>ContextBG</include>
+			<include>WindowSlide</include>
+			<control type="list" id="6">
+				<top>85</top>
+				<height>400</height>
+				<left>30</left>
+				<onup>9001</onup>
+				<ondown>9001</ondown>
+				<pagecontrol>60</pagecontrol>
+				<scrolltime tween="quadratic" easing="out">200</scrolltime>
+				<itemlayout height="80" width="600">
+					<control type="label">
+						<width>550</width>
+						<height>80</height>
+						<!-- <font>font35</font> -->
+						<textoffsetx>15</textoffsetx>
+						<font>font40</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+					<control type="label">
+						<right>10</right>
+						<width>200</width>
+						<height>80</height>
+						<!-- <font>font35</font> -->
+						<textoffsetx>15</textoffsetx>
+						<align>right</align>
+						<font>font40</font>
+						<label>$INFO[ListItem.AddonVersion]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="80" width="600">
+					<control type="group">
+						<control type="image">
+							<width>600</width>
+							<height>80</height>
+							<texture border="10" colordiffuse="green">button.png</texture>
+						</control>
+						<control type="label">
+							<width>550</width>
+							<height>80</height>
+							<!-- <font>font35</font> -->
+							<textoffsetx>15</textoffsetx>
+							<font>font40</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<control type="label">
+							<right>10</right>
+							<width>200</width>
+							<height>80</height>
+							<!-- <font>font35</font> -->
+							<textoffsetx>15</textoffsetx>
+							<align>right</align>
+							<font>font40</font>
+							<label>$INFO[ListItem.AddonVersion]</label>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="grouplist" id="9001">
+				<left>30</left>
+				<top>550</top>
+				<height>80</height>
+				<ondown>6</ondown>
+				<onup>6</onup>
+				<ondown>3</ondown>
+				<onup>3</onup>
+				<itemgap>40</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="button" id="5">
+					<description>Manual button</description>
+					<width>460</width>
+					<height>80</height>
+					<label>Get More</label>
+					<align>center</align>
+					<focusedcolor>label</focusedcolor>
+					<texturenofocus border="5">btnframe.png</texturenofocus>
+				</control>
+				<control type="button" id="7">
+					<description>Cancel button</description>
+					<width>460</width>
+					<height>80</height>
+					<label>Cancel</label>
+					<align>center</align>
+					<focusedcolor>label</focusedcolor>
+					<texturenofocus border="5">btnframe.png</texturenofocus>
+				</control>
+			</control>
+			<control type="image">
+				<right>95</right>
+				<top>85</top>
+				<height>200</height>
+				<width>200</width>
+				<aspectratio>keep</aspectratio>
+				<texture>$INFO[ListItem.Icon]</texture>
+			</control>
+			<control type="label" id="1">
+				<top>10</top>
+				<width>1040</width>
+				<height>30</height>
+				<align>center</align>
+				<visible>!Control.IsVisible(3)</visible>
+			</control>
+			<control type="label">
+				<top>300</top>
+				<right>45</right>
+				<width>310</width>
+				<height>200</height>
+				<align>center</align>
+				<font>font40</font>
+				<wrapmultiline>true</wrapmultiline>
+				<label>$INFO[Container(6).ListItem.Label2]</label>
+			</control>
+		</control>
+	</controls>
+</window>

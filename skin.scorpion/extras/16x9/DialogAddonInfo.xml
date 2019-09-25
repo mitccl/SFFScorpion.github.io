@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window type="dialog">
+	<defaultcontrol always="true">9000</defaultcontrol>
+	<controls>
+		<include>CommonBackground</include>
+		<control type="group">
+			<centertop>50%</centertop>
+			<centerleft>50%</centerleft>
+			<width>1880</width>
+			<height>1080</height>
+<!--screenshots-->
+			<control type="wraplist" id="50">
+				<top>20</top>
+				<width>1880</width>
+				<height>260</height>
+				<onleft>50</onleft>
+				<onright>50</onright>
+				<ondown>9000</ondown>
+				<onup>9000</onup>
+				<orientation>horizontal</orientation>
+				<itemlayout height="260" width="470">
+					<control type="image">
+						<width>460</width>
+						<height>260</height>
+						<texture background="true" colordiffuse="darker">100.png</texture>
+					</control>
+					<control type="image">
+						<width>460</width>
+						<height>260</height>
+						<texture background="true">$INFO[ListItem.Art(thumb)]</texture>
+						<bordersize>5</bordersize>
+					</control>
+				</itemlayout>
+				<focusedlayout height="260" width="470">
+					<control type="image">
+						<width>460</width>
+						<height>260</height>
+						<texture background="true" colordiffuse="green">100.png</texture>
+					</control>
+					<control type="image">
+						<width>460</width>
+						<height>260</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordersize>5</bordersize>
+					</control>
+				</focusedlayout>
+			</control>
+<!--labels-->
+			<control type="image">
+			<centerleft>50%</centerleft>
+				<top>295</top>
+				<width>100%</width>
+				<height>4</height>
+				<texture border="1">titledivide2.png</texture>
+			</control>
+			<control type="grouplist">
+				<top>280</top>
+				<centerleft>50%</centerleft>
+				<width>1840</width>
+				<height>580</height>
+				<usecontrolcoords>true</usecontrolcoords>
+				<itemgap>60</itemgap>
+				<control type="label">
+					<width>1840</width>
+					<height>30</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<label>$INFO[Container(50).ListItem.Path]</label>
+					<font>font40</font>
+					<visible>![String.IsEmpty(ListItem.AddonCreator) | String.IsEmpty(ListItem.AddonVersion)]</visible>
+				</control>
+				<control type="label">
+					<width>1840</width>
+					<height>30</height>
+					<align>left</align>
+					<label>[COLOR themecolor]$LOCALIZE[560]:[/COLOR] $INFO[ListItem.Property(Addon.ID)]    [COLOR themecolor]Ver [/COLOR]$INFO[ListItem.AddonVersion]    [COLOR themecolor]$LOCALIZE[21863]:[/COLOR] $INFO[ListItem.AddonCreator]</label>
+					<font>font40</font>
+					<visible>![String.IsEmpty(ListItem.AddonCreator) | String.IsEmpty(ListItem.AddonVersion)]</visible>
+				</control>
+				<control type="label">
+					<width>1840</width>
+					<height>30</height>
+					<align>left</align>
+					<label>[COLOR themecolor]$LOCALIZE[146][/COLOR] $INFO[ListItem.AddonType]    [COLOR themecolor]$LOCALIZE[12013]:[/COLOR] $INFO[ListItem.AddonInstallDate]</label>
+					<font>font40</font>
+				</control>
+				<control type="label">
+					<width>1840</width>
+					<height>30</height>
+					<align>left</align>
+					<font>font40</font>
+					<label>[COLOR themecolor]Summary:[/COLOR] $INFO[ListItem.AddonSummary]</label>
+					<visible>!String.IsEmpty(ListItem.AddonSummary)</visible>
+				</control>
+				<control type="label" id="400">
+					<description>Description</description>
+					<width>1840</width>
+					<height>60</height>
+					<font>font40tb</font>
+					<wrapmultiline>true</wrapmultiline>
+					<align>left</align>
+					<label>[COLOR themecolor]$LOCALIZE[21821]:[/COLOR] $INFO[ListItem.AddonDescription]</label>
+					<visible>!String.IsEmpty(ListItem.AddonDescription)</visible>
+				</control>
+				<control type="label">
+					<description>What's new</description>
+					<width>1840</width>
+					<height>60</height>
+					<font>font40tb</font>
+					<wrapmultiline>true</wrapmultiline>
+					<align>left</align>
+					<label>[COLOR themecolor]$LOCALIZE[24054]: [/COLOR][CR]$INFO[ListItem.AddonNews]</label>
+					<visible>!String.IsEmpty(ListItem.AddonNews)</visible>
+				</control>
+				<control type="label">
+					<description>Disclaimer</description>
+					<width>1840</width>
+					<height>60</height>
+					<font>font40tb</font>
+					<wrapmultiline>true</wrapmultiline>
+					<align>left</align>
+					<label>[COLOR themecolor]Disclaimer:[/COLOR] $INFO[ListItem.AddonDisclaimer]</label>
+					<visible>!String.IsEmpty(ListItem.AddonDisclaimer)</visible>
+				</control>
+			</control>
+<!--buttons-->
+			<control type="image">
+				<centerleft>50%</centerleft>
+				<top>905</top>
+				<width>100%</width>
+				<height>4</height>
+				<texture border="1">titledivide2.png</texture>
+			</control>
+			<control type="grouplist" id="9000">
+				<centerleft>50%</centerleft>
+				<top>920</top>
+				<width>1790</width>
+				<height>520</height>
+				<onup>50</onup>
+				<ondown>50</ondown>
+				<itemgap>30</itemgap>
+				<orientation>horizontal</orientation>
+				<control type="button" id="9">
+					<description>Configure Addon</description>
+					<width>230</width>
+					<height>150</height>
+					<label>24020</label>
+					<font>font25</font>
+					<align>center</align>
+					<disabledcolor>light</disabledcolor>
+					<focusedcolor>FFf9f9f9</focusedcolor>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<texturefocus>btnframegrn.png</texturefocus>
+				</control>
+				<control type="button" id="8">
+					<description>Update Addon button</description>
+					<width>230</width>
+					<height>150</height>
+					<label>24069</label>
+					<font>font25</font>
+					<align>center</align>
+					<focusedcolor>FFf9f9f9</focusedcolor>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<texturefocus>btnframegrn.png</texturefocus>
+					<disabledcolor>light</disabledcolor>
+				</control>
+				<control type="button" id="200">
+					<description>Screenshot button</description>
+					<width>230</width>
+					<height>150</height>
+					<font>font25</font>
+					<align>center</align>
+					<focusedcolor>FFf9f9f9</focusedcolor>
+					<label>$LOCALIZE[1000]</label>
+					<font>font30</font>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>Action(select)</onclick>
+					<onclick>SetFocus(9000)</onclick>
+					<font>font25</font>
+					<align>center</align>
+					<enable>Integer.IsGreater(Container(50).NumItems,0)</enable>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<texturefocus>btnframegrn.png</texturefocus>
+					<disabledcolor>light</disabledcolor>
+				</control>
+				<control type="button" id="12">
+					<description>Launch Addon button</description>
+					<width>230</width>
+					<height>150</height>
+					<focusedcolor>label</focusedcolor>
+					<label>518</label>
+					<font>font25</font>
+					<align>center</align>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<texturefocus>btnframegrn.png</texturefocus>
+					<disabledcolor>light</disabledcolor>
+				</control>
+				<control type="button" id="6">
+					<description>Install/UnInstall Addon button</description>
+					<width>230</width>
+					<height>150</height>
+					<focusedcolor>label</focusedcolor>
+					<label>24022</label>
+					<font>font25</font>
+					<align>center</align>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<texturefocus>btnframegrn.png</texturefocus>
+					<disabledcolor>light</disabledcolor>
+				</control>
+				<control type="button" id="7">
+					<description>Enable/Disable Addon button</description>
+					<width>230</width>
+					<height>150</height>
+					<focusedcolor>label</focusedcolor>
+					<label>24021</label>
+					<font>font25</font>
+					<align>center</align>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<texturefocus>btnframegrn.png</texturefocus>
+					<disabledcolor>light</disabledcolor>
+				</control>
+				<control type="radiobutton" id="13">
+					<description>Auto Update Addon button</description>
+					<width>230</width>
+					<height>150</height>
+					<focusedcolor>label</focusedcolor>
+					<label>21340</label>
+					<font>font25</font>
+					<align>center</align>
+					<radioposx>90</radioposx>
+					<radioposy>90</radioposy>
+					<texturefocus>btnframegrn.png</texturefocus>
+					<texturenofocus colordiffuse="darker">button.png</texturenofocus>
+					<disabledcolor>light</disabledcolor>
+				</control>
+			</control>
+
+<!-- Broken -->
+			<control type="group">
+				<left>522</left>
+				<top>751</top>
+				<visible>!Window.isVisible(AddonSettings) + !Window.IsActive(TextViewer)</visible>
+				<visible>!String.IsEmpty(ListItem.AddonBroken)</visible>
+				<control type="image">
+					<width>120</width>
+					<height>120</height>
+					<aspectratio align="left">keep</aspectratio>
+					<bordersize>1,1,2,1</bordersize>
+					<texture>DefaultIconError.png</texture>
+				</control>
+				<control type="fadelabel">
+					<left>120</left>
+					<top>10</top>
+					<width>1181</width>
+					<height>115</height>
+					<aligny>top</aligny>
+					<textoffsetx>15</textoffsetx>
+					<font>font35B</font>
+					<label>24096</label>
+				</control>
+				<control type="fadelabel">
+					<left>120</left>
+					<top>55</top>
+					<width>1181</width>
+					<height>50</height>
+					<textoffsetx>15</textoffsetx>
+					<font>font35B</font>
+					<label>$INFO[ListItem.AddonBroken]</label>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

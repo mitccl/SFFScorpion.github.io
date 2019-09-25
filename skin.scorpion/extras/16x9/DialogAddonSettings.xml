@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">3</defaultcontrol>
+	<controls>
+		<control type="group">
+		<include>WindowSlide</include>
+		<!-- <visible>String.IsEqual(Skin.String(Views),100%er)</visible> -->
+		<left>100</left>
+		<top>250</top>
+		<height>760</height>
+		<right>120</right>
+		<include>ContextBG</include>
+			<control type="label" id="2">
+				<description>header label</description>
+				<left>30</left>
+				<top>30</top>
+				<width>1614</width>
+				<height>40</height>
+				<textoffsetx>15</textoffsetx>
+				<align>center</align>
+			</control>
+			<!-- left group -->
+			<control type="group">
+				<left>25</left>
+				<top>90</top>
+				<control type="grouplist" id="3">
+					<description>button area</description>
+					<width>310</width>
+					<height>640</height>
+					<onleft>9001</onleft>
+					<onright>5</onright>
+					<onup>9</onup>
+					<ondown>9</ondown>
+					<scrolltime>0</scrolltime>
+				</control>
+			</control>
+			<!-- middle group -->
+			<control type="group">
+				<left>355</left>
+				<top>90</top>
+				<control type="grouplist" id="5">
+					<description>control area</description>
+					<width>960</width>
+					<height>640</height>
+					<onleft>3</onleft>
+					<onright>9001</onright>
+					<onup>2</onup>
+					<ondown>2</ondown>
+					<scrolltime tween="cubic" easing="out">500</scrolltime>
+				</control>
+			</control>
+			<!-- right group -->
+			<control type="group">
+				<left>1345</left>
+				<top>90</top>
+				<control type="grouplist" id="9001">
+					<width>310</width>
+					<height>640</height>
+					<onleft>5</onleft>
+					<onright>3</onright>
+					<onup>9001</onup>
+					<ondown>9001</ondown>
+					<control type="image" id="2000">
+						<width>310</width>
+						<height>300</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[System.AddonIcon(Window.Property(Addon.ID))]</texture>
+					</control>
+					<control type="button" id="28">
+						<description>OK Button</description>
+						<height>100</height>
+						<width>310</width>
+						<focusedcolor>label</focusedcolor>
+						<label>186</label>
+						<font>font30</font>
+					</control>
+					<control type="button" id="29">
+						<description>Cancel Button</description>
+						<height>100</height>
+						<width>310</width>
+						<focusedcolor>label</focusedcolor>
+						<label>222</label>
+						<font>font30</font>
+					</control>
+					<control type="button" id="30">
+						<description>Defaults Button</description>
+						<height>100</height>
+						<width>310</width>
+						<focusedcolor>label</focusedcolor>
+						<label>409</label>
+						<font>font30</font>
+					</control>
+				</control>
+			</control>
+			<control type="button" id="10">
+				<description>Default Category Button</description>
+				<height>80</height>
+				<width>300</width>
+				<focusedcolor>label</focusedcolor>
+				<font>font35</font>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="button" id="7">
+				<description>Default Button</description>
+				<width>960</width>
+				<height>80</height>
+				<focusedcolor>label</focusedcolor>
+				<font>font30</font>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="radiobutton" id="8">
+				<description>Default RadioButton</description>
+				<width>960</width>
+				<focusedcolor>label</focusedcolor>
+				<font>font30</font>
+				<height>80</height>
+				<textwidth>880</textwidth>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="spincontrolex" id="9">
+				<description>Default spincontrolex</description>
+				<width>960</width>
+				<focusedcolor>label</focusedcolor>
+				<font>font30</font>
+				<height>80</height>
+				<reverse>true</reverse>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="label" id="14">
+				<width>960</width>
+				<height>100</height>
+				<scroll>true</scroll>
+				<focusedcolor>label</focusedcolor>
+				<font>font35</font>
+				<label />
+				<textcolor>themecolor</textcolor>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="edit" id="12">
+				<width>960</width>
+				<height>60</height>
+				<label />
+				<focusedcolor>label</focusedcolor>
+				<font>font30</font>
+				<textoffsetx>20</textoffsetx>
+			</control>
+			<control type="image" id="11">
+				<description>Default Seperator</description>
+				<width>960</width>
+				<height>1</height>
+			</control>
+			<control type="sliderex" id="13">
+				<description>Default Slider</description>
+				<width>960</width>
+				<height>80</height>
+				<focusedcolor>label</focusedcolor>
+				<font>font30</font>
+			</control>
+		</control>
+	</controls>
+</window>

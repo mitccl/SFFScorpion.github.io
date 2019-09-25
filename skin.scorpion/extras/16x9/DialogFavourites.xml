@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">450</defaultcontrol>
+	<controls>
+		<control type="group"> 
+			<top>450</top>
+			<width>100%</width>
+			<height>540</height>
+			<control type="label">
+				<top>-30</top>
+				<width>100%</width>
+				<height>40</height>
+				<font>font60</font>
+				<textcolor>green</textcolor>
+				<label>Favourites</label>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+			</control>
+			<control type="panel" id="450">
+				<centerleft>50%</centerleft>
+				<top>50</top>
+				<width>1260</width>
+				<height>520</height>
+				<onup>9020</onup>
+				<onleft>9801</onleft>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<!-- <content>favourites://</content> -->
+				<itemlayout height="260" width="200">
+					<control type="image">
+						<width>185</width>
+						<height>250</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="5" colordiffuse="light">panel.png</bordertexture>
+						<bordersize>3</bordersize>
+					</control>
+				</itemlayout>
+				<focusedlayout height="260" width="200">
+					<control type="image">
+						<width>185</width>
+						<height>250</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="5" colordiffuse="green">panel.png</bordertexture>
+						<bordersize>3</bordersize>
+						<include>PanelZoom</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>910</left>
+				<top>570</top>
+				<width>100</width>
+				<height>45</height>
+				<texture background="true">dnarrow.png</texture>
+				<visible>Container(450).HasNext</visible>
+			</control>	
+		</control>
+	</controls>
+</window>

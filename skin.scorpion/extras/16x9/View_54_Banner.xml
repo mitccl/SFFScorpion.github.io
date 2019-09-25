@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video List -->
+	<include name="Banner">
+		<control type="group">
+			<visible>![Window.IsActive(addoninformation) | Window.IsActive(addonsettings)] + Control.IsVisible(54)</visible>
+			<include>WindowSlide</include>
+			<control type="image">
+				<fadetime>IconFade</fadetime>
+				<include>FullscreenDimensions</include>
+				<texture>fallback.png</texture>
+			</control>
+			<control type="image" id="154">
+				<fadetime>IconFade</fadetime>
+				<centerleft>74%</centerleft>
+				<centertop>45%</centertop>
+				<width>550</width>
+				<aspectratio>keep</aspectratio>
+				<texture diffuse="posterdiff.png">$INFO[ListItem.Art(poster)]</texture>
+				<visible>!StringIsEmpty(ListItem.Art(poster))</visible>
+			</control>
+			<control type="group">
+				<control type="wraplist" id="54">
+					<left>75</left>
+					<centertop>53%</centertop>
+					<height>980</height>
+					<width>1770</width>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<onleft condition="![String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">9801</onleft>
+					<onleft condition="[String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">1111</onleft>
+					<viewtype label="Banner">list</viewtype>
+					<focusposition>2</focusposition>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="sine" easing="in">300</scrolltime>
+					<itemlayout height="190" width="800" condition="!Container.Content(files)">
+						<control type="image">
+							<left>20</left>
+							<width>800</width>
+							<aspectratio>keep</aspectratio>
+							<texture>$VAR[Banner_Var]</texture>
+							<bordertexture colordiffuse="grey3">nfocusls.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="220" width="840" condition="!Container.Content(files)">
+						<control type="image">
+							<left>0</left>
+							<width>840</width>
+							<aspectratio>keep</aspectratio>
+							<texture>$VAR[Banner_Var]</texture>
+							<bordertexture colordiffuse="green">focusls.png</bordertexture>
+							<bordersize>20</bordersize>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<!-- <control type="textbox"> -->
+				<!-- <left>970</left> -->
+				<!-- <bottom>60</bottom> -->
+				<!-- <width>875</width> -->
+				<!-- <height>363</height> -->
+				<!-- <align>justify</align> -->
+				<!-- <aligny>center</aligny> -->
+				<!-- <label>$INFO[ListItem.Label2]</label> -->
+			<!-- </control> -->
+			<control type="group"> 
+				<left>970</left>
+				<width>880</width>
+				<visible>![ListItem.IsParentFolder | String.Contains(ListItem.Label,next)]</visible>
+				<control type="image">
+					<left>-20</left>
+					<top>800</top>
+					<width>150</width>
+					<align>center</align>
+					<height>100</height>
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture>$INFO[ListItem.Studio,resource://resource.images.studios.coloured/,.png]</texture>
+				</control>
+				<control type="image">
+					<right>0</right>
+					<top>800</top>
+					<width>175</width>
+					<height>150</height>
+					<align>right</align>
+					<!-- <aligny>center</aligny> -->
+					<aspectratio aligny="top">keep</aspectratio>
+					<texture>$INFO[ListItem.MPAA,flags/mpaa/,.png]</texture>
+					<visible>![ListItem.IsParentFolder | String.Contains(ListItem.Label,Next)] + Control.IsVisible(54)</visible>
+				</control>
+				<control type="label">
+					<top>950</top>
+					<width>880</width>
+					<height min="35" max="80">auto</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<wrapmultiline>true</wrapmultiline>
+					<font>font35r</font>
+					<label>$VAR[Label_InfoLine] • $INFO[ListItem.Genre]</label>
+				</control>
+				<!-- <control type="label">  -->
+					<!-- <width>875</width> -->
+					<!-- <height>85</height> -->
+					<!-- <align>center</align> -->
+					<!-- <font>font55</font> -->
+					<!-- <textcolor>green</textcolor> -->
+					<!-- <shadowcolor>white</shadowcolor> -->
+					<!-- <label>$INFO[ListItem.Label]</label> -->
+				<!-- </control> -->
+			</control>
+		</control>
+	</include>
+</includes>

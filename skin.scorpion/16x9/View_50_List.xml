@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video List -->
+	<include name="CommonList">
+		<control type="group">
+			<visible>Control.IsVisible(50)</visible>
+			<include>WindowSlide</include>
+			<control type="group">
+				<control type="list" id="50">
+					<left>75</left>
+					<centertop>55%</centertop>
+					<height>840</height>
+					<width>1770</width>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<onleft condition="![String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">9801</onleft>
+					<onleft condition="[String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">1111</onleft>
+					<viewtype label="Common List">list</viewtype>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic" easing="out">200</scrolltime>
+					<include>PanelSlide</include>
+					<itemlayout height="105" width="800" condition="Container.Content(addons) + ![Container.Content(movies) | Container.Content(files)]">
+						<control type="label">
+							<left>20</left>
+							<width>600</width>
+							<height>105</height>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<height>105</height>
+							<width>800</width>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="105" width="800" condition="Container.Content(addons) + ![Container.Content(movies) | Container.Content(files)]">
+						<control type="image">
+							<width>800</width>
+							<height>105</height>
+							<include>FOScroll</include>
+							<texture border="5">button.png</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<width>600</width>
+							<height>105</height>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<width>780</width>
+							<height>105</height>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</focusedlayout>
+					<itemlayout height="105" width="1770" condition="Container.Content(files) + ![Container.Content(movies) | Container.Content(addons)]">
+						<control type="label">
+							<left>20</left>
+							<top>10</top>
+							<width>1000</width>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>10</top>
+							<width>1770</width>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</itemlayout>
+					<focusedlayout height="105" width="1770" condition="Container.Content(files) + ![Container.Content(movies) | Container.Content(addons)]">
+						<control type="image">
+							<width>1770</width>
+							<height>105</height>
+							<include>FOScroll</include>
+							<texture border="5">button.png</texture>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>10</top>
+							<width>1000</width>
+							<label>BACK</label>
+							<visible>ListItem.IsParentFolder</visible>
+						</control>
+						<control type="label">
+							<left>20</left>
+							<top>10</top>
+							<width>1770</width>
+							<font>font45</font>
+							<label>$INFO[ListItem.Label]</label>
+							<visible>!ListItem.IsParentFolder</visible>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+			<control type="group">
+				<!-- <visible>Control.IsVisible(50)</visible> -->
+				<control type="label">
+					<top>105</top>
+					<width>100%</width>
+					<height>30</height>
+					<align>center</align>
+					<font>font60</font>
+					<textcolor>green</textcolor>
+					<label>$VAR[List_Var]</label>
+				</control>
+				<control type="label">
+					<top>105</top>
+					<width>100%</width>
+					<height>30</height>
+					<align>center</align>
+					<font>font60</font>
+					<textcolor>green</textcolor>
+					<scroll>true</scroll>
+					<scrollspeed>50</scrollspeed>
+					<textoffsetx>15</textoffsetx>
+					<label>• BACK •</label>
+					<visible>[Control.IsVisible(50) + ListItem.IsParentFolder] + !Container.Content(files)</visible>
+				</control>
+				<control type="image">
+					<top>160</top>
+					<width>100%</width>
+					<height>20</height>
+					<texture background="true">titledivide.png</texture>
+				</control>
+				<control type="image" id="5001">
+					<centerleft>75%</centerleft>
+					<centertop>50%</centertop>
+					<height>383</height>
+					<fadetime>IconFade</fadetime>
+					<aspectratio>keep</aspectratio>
+					<texture background="true" fallback="fallback.png">$INFO[ListItem.Art(fanart)]</texture>
+					<bordersize>5</bordersize>
+					<bordertexture border="5">ls.png</bordertexture>
+					<visible>Control.IsVisible(50) + [Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(episodes)]</visible>
+				</control>
+				<control type="image">
+					<centertop>50%</centertop>
+					<centerleft>65%</centerleft>
+					<width>600</width>
+					<height>600</height>
+					<texture>roundif.png</texture>
+					<visible>![Control.IsVisible(5001) | Container.Content(files)]</visible>
+				</control>
+				<control type="image">
+					<centertop>50%</centertop>
+					<centerleft>65%</centerleft>
+					<width>500</width>
+					<height>500</height>
+					<texture diffuse="50.png">$INFO[ListItem.Icon]</texture>
+					<aspectratio>keep</aspectratio>
+					<visible>![Control.IsVisible(5001) | Container.Content(files)]</visible>
+				</control>
+				<control type="label">
+					<top>790</top>
+					<centerleft>65%</centerleft>
+					<width>500</width>
+					<height>30</height>
+					<align>center</align>
+					<font>font50</font>
+					<label>$INFO[ListItem.Label2]</label>
+					<visible>Window.IsActive(addonbrowser)</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

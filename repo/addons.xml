@@ -78,7 +78,7 @@
 	</extension>
 </addon>
 
-<addon id="script.module.scorpion" name="Scorpion Module" version="1.0" provider-name="Pick">
+<addon id="script.module.scorpion" name="Scorpion Module" version="1.1" provider-name="Pick">
 	<requires>
 		<import addon="xbmc.python" version="2.26.0" />
 	</requires>

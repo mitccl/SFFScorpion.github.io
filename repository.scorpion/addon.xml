@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="repository.scorpion" name="Scorpion Repository" version="1.1" provider-name="Pick">
+	<requires>
+		<import addon="xbmc.addon" version="12.0.0"/>
+	</requires>
+	<extension point="xbmc.addon.repository" name="Scorpion Repository">
+		<info compressed="false">https://sffscorpion.github.io/repo/addons.xml</info>
+		<checksum>https://sffscorpion.github.io/repo/addons.xml.md5</checksum>
+		<datadir zip="true">https://sffscorpion.github.io/repo</datadir>
+		<hashes>false</hashes>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Scorpion: The very best in van candy.</summary>
+		<description>Freshness Guaranteed</description>
+        <disclaimer lang="en">The author of this addon does not give a f--ck what you do.</disclaimer>
+		<platform>all</platform>
+            <assets>
+ 			   <icon>icon.png</icon>
+ 			   <fanart>fanart.jpg</fanart>
+ 		    </assets>
+	</extension>
+</addon>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol>9000</defaultcontrol>
+	<include>WindowSlide</include>
+	<controls>
+		<control type="group">
+			<left>755</left>
+			<top>455</top>
+			<width>430</width>
+			<height>420</height>
+			<!-- <control type="image"> -->
+				<!-- <width>100%</width> -->
+				<!-- <height>100%</height> -->
+				<!-- <texture colordiffuse="dark">100.png</texture> -->
+			<!-- </control> -->
+			<control type="grouplist" id="9000">
+				<left>5</left>
+				<top>5</top>
+				<control type="button" id="9001">
+					<width>420</width>
+					<height>80</height>
+					<align>center</align>
+					<font>font40</font>
+					<focusedcolor>label</focusedcolor>
+					<textoffsetx>45</textoffsetx>
+					<onclick>Quit()</onclick>
+					<label>EXIT</label>
+					<texturenofocus>buttonnf.png</texturenofocus>
+					<texturefocus>buttonfo.png</texturefocus>
+					<visible>System.ShowExitButton</visible>
+				</control>
+				<control type="button" id="9003">
+					<width>420</width>
+					<height>80</height>
+					<align>center</align>
+					<font>font40</font>
+					<focusedcolor>label</focusedcolor>
+					<textoffsetx>45</textoffsetx>
+					<label>Reboot</label>
+					<texturenofocus>buttonnf.png</texturenofocus>
+					<texturefocus>buttonfo.png</texturefocus>
+					<onclick>Reset()</onclick>
+					<visible>System.CanReboot + System.HasAddon(service.coreelec.settings)</visible>
+				</control>
+				<control type="button" id="9004">
+					<width>420</width>
+					<height>80</height>
+					<align>center</align>
+					<font>font40</font>
+					<focusedcolor>label</focusedcolor>
+					<textoffsetx>45</textoffsetx>
+					<label>Android</label>
+					<texturenofocus>buttonnf.png</texturenofocus>
+					<texturefocus>buttonfo.png</texturefocus>
+					<onclick>Dialog.Close(all,true)</onclick>
+					<onclick>System.ExecWait(&quot;/usr/sbin/rebootfromnand&quot;)</onclick>
+					<onclick>XBMC.Reboot()</onclick>
+					<visible>System.CanReboot + System.HasAddon(service.coreelec.settings)</visible>
+				</control>
+				<control type="button" id="9005">
+					<width>420</width>
+					<height>80</height>
+					<align>center</align>
+					<font>font40</font>
+					<focusedcolor>label</focusedcolor>
+					<textoffsetx>45</textoffsetx>
+					<label>Power</label>
+					<texturenofocus>buttonnf.png</texturenofocus>
+					<texturefocus>buttonfo.png</texturefocus>
+					<onclick>Powerdown()</onclick>
+					<visible>System.CanPowerDown + System.HasAddon(service.coreelec.settings)</visible>
+				</control>
+				<control type="button" id="9006">
+					<width>420</width>
+					<height>80</height>
+					<align>center</align>
+					<font>font40</font>
+					<focusedcolor>label</focusedcolor>
+					<textoffsetx>45</textoffsetx>
+					<texturenofocus>buttonnf.png</texturenofocus>
+					<texturefocus>buttonfo.png</texturefocus>
+					<onclick>RestartApp()</onclick>
+					<label>Restart Kodi</label>
+				</control>
+				<!-- <control type="button" id="9007"> -->
+					<!-- <width>420</width> -->
+					<!-- <height>80</height> -->
+					<!-- <align>center</align> -->
+					<!-- <font>font40</font> -->
+					<!-- <focusedcolor>label</focusedcolor> -->
+					<!-- <textoffsetx>45</textoffsetx> -->
+					<!-- <onclick>Skin.ToggleDebug()</onclick> -->
+					<!-- <label>Debug</label> -->
+				<!-- </control> -->
+			</control>
+		</control>
+	</controls>
+</window>

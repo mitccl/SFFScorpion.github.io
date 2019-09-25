@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<dwsync>
+<file name="__init__.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="anilist.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="cache.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="cfdecoder.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="cfscrape.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="changelog.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="cleandate.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="cleangenre.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="cleantitle.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="client.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="control.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="debrid.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="directstream.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="dom_parser.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="dom_parser2.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="downloader.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="filmon.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="jsunfuck.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="jsunpack.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="keepalive.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="libtools.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="log_utils.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="metacache.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="playcount.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="player.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="proxy.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="regex.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="source_utils.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="sources.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="thexem.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="trailer.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="trakt.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="tvmaze.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="unjuice.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="utils.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="views.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="workers.py" server="ftp.sffscorpion.com//" local="132123465900000000" remote="-1" Dst="-1" />
+<file name="youtube.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+<file name="youtube_menu.py" server="ftp.sffscorpion.com//" local="132123465890000000" remote="-1" Dst="-1" />
+</dwsync>

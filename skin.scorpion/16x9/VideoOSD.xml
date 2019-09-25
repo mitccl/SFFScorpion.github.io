@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<zorder>10</zorder>
+	<onload condition="!VideoPlayer.Content(livetv)">SetFocus(205)</onload>
+	<controls>
+		<control type="group">
+			<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(osdVideoSettings) | Window.IsVisible(osdAudioSettings) | Window.IsVisible(subtitlesearch)]</visible>
+			<animation effect="fade" end="100" start="0" delay="150" time="200">Visible</animation>
+			<animation effect="fade" end="100" time="260">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="200">WindowClose</animation>
+			<control type="image">
+				<width>100%</width>
+				<height>80</height>
+				<texture colordiffuse="black">100.png</texture>
+			</control>
+			<control type="label">
+				<right>30</right>
+				<width>100%</width>
+				<height>60</height>
+				<font>font35r</font>
+				<align>right</align>
+				<label>$INFO[System.Time]</label>
+				<visible>Player.Seeking | Player.DisplayAfterSeek</visible>
+			</control>
+			<control type="slider" id="199">
+				<description>Seek Slider</description>
+				<left>0</left>
+				<top>1020</top>
+				<width>100%</width>
+				<height>60</height>
+				<texturesliderbar />
+				<textureslidernib />
+				<textureslidernibfocus />
+				<action>seek</action>
+				<onup>200</onup>
+			</control>
+			<control type="grouplist" id="200">
+				<top>30</top>
+				<height>40</height>
+				<width>100%</width>
+				<align>center</align>
+				<scrolltime tween="sine">200</scrolltime>
+				<orientation>horizontal</orientation>
+				<onleft>200</onleft>
+				<onright>200</onright>
+				<itemgap>40</itemgap>
+				<control type="button" id="201">
+					<texturefocus colordiffuse="green">osd/buttons/osdaudio.png</texturefocus>
+					<texturenofocus>osd/buttons/osdaudio.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>ActivateWindow(osdaudiosettings)</onclick>
+				</control>
+				<control type="button" id="202">
+					<texturefocus colordiffuse="green">osd/buttons/osdvideo.png</texturefocus>
+					<texturenofocus>osd/buttons/osdvideo.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>ActivateWindow(10123)</onclick>
+				</control>
+				<control type="button" id="203">
+					<texturefocus colordiffuse="green">osd/buttons/osdprevtrack.png</texturefocus>
+					<texturenofocus>osd/buttons/osdprevtrack.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>PlayerControl(Previous)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="button" id="204">
+					<texturefocus colordiffuse="green">osd/buttons/osdrewind.png</texturefocus>
+					<texturenofocus>osd/buttons/osdrewind.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick condition="!Player.TempoEnabled">PlayerControl(Rewind)</onclick>
+					<onclick condition="Player.TempoEnabled">PlayerControl(tempodown)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="togglebutton" id="205">
+					<texturefocus colordiffuse="green">osd/buttons/osdpause.png</texturefocus>
+					<texturenofocus>osd/buttons/osdpause.png</texturenofocus>
+					<alttexturefocus colordiffuse="green">osd/buttons/osdplay.png</alttexturefocus>
+					<alttexturenofocus>osd/buttons/osdplay.png</alttexturenofocus>
+					<label />
+					<altlabel>208</altlabel>
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+					<onclick>PlayerControl(Play)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="button" id="206">
+					<texturefocus colordiffuse="green">osd/buttons/osdstop.png</texturefocus>
+					<texturenofocus>osd/buttons/osdstop.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>PlayerControl(Stop)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="button" id="207">
+					<texturefocus colordiffuse="green">osd/buttons/osdforward.png</texturefocus>
+					<texturenofocus>osd/buttons/osdforward.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick condition="!Player.TempoEnabled">PlayerControl(Forward)</onclick>
+					<onclick condition="Player.TempoEnabled">PlayerControl(tempoup)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="button" id="208">
+					<texturefocus colordiffuse="green">osd/buttons/osdnexttrack.png</texturefocus>
+					<texturenofocus>osd/buttons/osdnexttrack.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>PlayerControl(Next)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="button" id="209">
+					<texturefocus colordiffuse="green">osd/buttons/osdsubtitles.png</texturefocus>
+					<texturenofocus>osd/buttons/osdsubtitles.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>ActivateWindow(SubtitleSearch)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+				<control type="button" id="210">
+					<texturefocus colordiffuse="green">osd/buttons/osddvd.png</texturefocus>
+					<texturenofocus>osd/buttons/osddvd.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>PlayerControl(ShowVideoMenu)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+					<visible>VideoPlayer.HasMenu</visible>
+				</control>
+				<control type="button" id="211">
+					<texturefocus colordiffuse="green">osd/buttons/osdinfo.png</texturefocus>
+					<texturenofocus>osd/buttons/osdinfo.png</texturenofocus>
+					<label />
+					<width>40</width>
+					<height>35</height>
+					<font />
+					<onclick>Close</onclick>
+					<onclick condition="!Window.IsActive(fullscreeninfo)">ActivateWindow(fullscreeninfo)</onclick>
+					<onclick condition="Window.IsActive(fullscreeninfo)">Dialog.Close(all,true)</onclick>
+					<oninfo>Dialog.Close(all,true)</oninfo>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

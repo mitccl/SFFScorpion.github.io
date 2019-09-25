@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<fonts>
+	<fontset id="Default" idloc="31390">
+		<font>
+			<name>font20</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>font20r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>20</size>
+		</font>
+
+		<font>
+			<name>font22r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>22</size>
+		</font>
+
+		<font>
+			<name>font25</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>font25r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>25</size>
+		</font>
+
+		<font>
+			<name>font30</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>font30r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+		
+		<font>
+			<name>font30w</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<linespacing>1.2</linespacing>
+			<size>30</size>
+		</font>
+
+		<font>
+			<name>font35</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>35</size>
+		</font>
+
+		<font>
+			<name>font35r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>35</size>
+		</font>
+
+		<font>
+			<name>font35w</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<linespacing>1.1</linespacing>
+			<size>35</size>
+		</font>
+
+		<font>
+			<name>font37r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>37</size>
+		</font>
+
+		<font>
+			<name>font40</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>40</size>
+		</font>
+
+		<font>
+			<name>font40r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>40</size>
+		</font>
+
+		<font>
+			<name>font45</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>45</size>
+		</font>
+
+		<font>
+			<name>font45cr</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<linespacing>.70</linespacing>
+			<size>45</size>
+		</font>
+
+		<font>
+			<name>font45r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>45</size>
+		</font>
+
+		<font>
+			<name>font45m</name>
+			<filename>ProzaLibre-Medium.ttf</filename>
+			<size>45</size>
+		</font>
+		
+		<font>
+			<name>font50</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>50</size>
+		</font>
+
+		<font>
+			<name>font50r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+
+		<font>
+			<name>font55</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>55</size>
+		</font>
+
+		<font>
+			<name>font55r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>55</size>
+		</font>
+
+		<font>
+			<name>font55l</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<style>light</style>
+			<size>55</size>
+		</font>
+
+		<font>
+			<name>font60</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>60</size>
+		</font>
+
+		<font>
+			<name>font60r</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<size>60</size>
+		</font>
+
+		<font>
+			<name>font60</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>60</size>
+		</font>
+
+		<font>
+			<name>font65</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>65</size>
+		</font>
+
+<!-- textbox -->
+		<font>
+			<name>font25tb</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<style>bold</style>
+			<size>25</size>
+			<linespacing>1.20</linespacing>
+		</font>
+
+		<font>
+			<name>font30tb</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<style>bold</style>
+			<size>30</size>
+			<linespacing>1.20</linespacing>
+		</font>
+
+		<font>
+			<name>font35tb</name>
+			<filename>ProzaLibre-Regular.ttf</filename>
+			<style>bold</style>
+			<size>35</size>
+			<linespacing>1.18</linespacing>
+		</font>
+
+		<font>
+			<name>font40tb</name>
+			<filename>ProzaLibre-ExtraBold.ttf</filename>
+			<size>40</size>
+			<linespacing>.70</linespacing>
+		</font>
+
+		<!-- Icons -->
+		<font>
+			<name>IconTiny</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>26</size>
+		</font>
+		<font>
+			<name>IconSmall</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>IconMedium</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>IconMediumMD</name>
+			<filename>MaterialIcons-Regular.ttf</filename>
+			<size>50</size>
+		</font>
+		<font>
+			<name>CloseButton</name>
+			<filename>webhostinghub-glyphs.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font10</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>23</size>
+		</font>
+		<font>
+			<name>font12</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>font13</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font14</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>33</size>
+		</font>
+		<font>
+			<name>font25_narrow</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>25</size>
+			<linespacing>0.8</linespacing>
+		</font>
+		<font>
+			<name>font27</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>27</size>
+		</font>
+		<font>
+			<name>font27_narrow</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>25</size>
+			<linespacing>0.8</linespacing>
+		</font>
+		<font>
+			<name>font37</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>37</size>
+		</font>
+		<font>
+			<name>font45</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>45</size>
+		</font>
+		<font>
+			<name>font60</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>60</size>
+		</font>
+		<font>
+			<name>font_clock</name>
+			<filename>NotoSans-Medium.ttf</filename>
+			<size>70</size>
+		</font>
+		<font>
+			<name>font_flag</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>18</size>
+		</font>
+		<font>
+			<name>font20_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>20</size>
+		</font>
+		<font>
+			<name>font25_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>25</size>
+		</font>
+		<font>
+			<name>font30_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>30</size>
+		</font>
+		<font>
+			<name>font32_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>32</size>
+		</font>
+		<font>
+			<name>font36_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>36</size>
+		</font>
+		<font>
+			<name>font45_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>45</size>
+		</font>
+		<font>
+			<name>font52_title</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>52</size>
+		</font>
+		<font>
+			<name>font_MainMenu</name>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>60</size>
+		</font>
+		<font>
+			<name>WeatherTemp</name>
+			<aspect>0.85</aspect>
+			<filename>NotoSans-Bold.ttf</filename>
+			<size>120</size>
+		</font>
+		<font>
+			<name>Mono30</name>
+			<filename>NotoMono-Regular.ttf</filename>
+			<size>30</size>
+		</font>
+	</fontset>
+</fonts>

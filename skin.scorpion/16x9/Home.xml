@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="utf-8"?>
+<window>
+	<defaultcontrol always="true">9021</defaultcontrol>
+	<onload>Skin.Reset(sidemenu)</onload>
+	<onload>SetFocus(9021)</onload>
+	<controls>
+		<include>CommonBackground</include>
+        <include>Topbar</include>
+		<include>WindowSlide</include>
+		<control type="group">
+			<include>WindowSlide</include>
+			<control type="image">
+				<left>100</left>
+				<top>130</top>
+				<width>300</width>
+				<height>150</height>	
+				<texture>home/moviesnf.png</texture>
+			</control>
+			<control type="image">
+				<left>430</left>
+				<top>130</top>
+				<width>300</width>
+				<height>150</height>	
+				<texture>home/tv.png</texture>
+			</control>
+			<control type="image">
+				<left>760</left>
+				<top>130</top>
+				<width>300</width>
+				<height>150</height>	
+				<texture>home/favs.png</texture>
+			</control>
+		</control>
+		<control type="grouplist" id="9020">
+			<centerleft>50%</centerleft>
+			<left>100</left>
+			<top>130</top>
+			<width>960</width>
+			<orientation>horizontal</orientation>
+			<itemgap>30</itemgap>
+			<onup>9010</onup>
+			<onleft>9801</onleft>
+			<scrolltime tween="sine" easing="inout" reversable="false">600</scrolltime>
+			<include>WindowSlide</include>
+			<control type="button" id="9021"> <!--movies-->
+				<width>300</width>
+				<height>150</height>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<visible>yes</visible>
+				<label/>
+				<texturefocus>home/moviesfo.png</texturefocus>
+				<texturenofocus />
+				<onclick>SetFocus(9900)</onclick>
+				<ondown>9900</ondown>
+				<onfocus>Skin.Reset(favs)</onfocus>
+				<onfocus>Skin.Reset(tv)</onfocus>
+				<onfocus>Skin.SetBool(movies)</onfocus>
+				<!-- <include>FOScroll</include> -->
+			</control>
+			<control type="button" id="9022"> <!--tv-->
+				<width>300</width>
+				<height>150</height>
+				<align>center</align>
+				<texturefocus>home/tvfo.png</texturefocus>
+				<texturenofocus>home/tv.png</texturenofocus>
+				<ondown>9900</ondown>
+				<onfocus>Skin.Reset(movies)</onfocus>
+				<onfocus>Skin.Reset(favs)</onfocus>
+				<onfocus>Skin.SetBool(tv)</onfocus>
+				<onclick>SetFocus(9900)</onclick>
+				<!-- <include>FOScroll</include> -->
+			</control>
+			<control type="button" id="9023"> <!--favourites-->
+				<width>300</width>
+				<height>150</height>
+				<align>center</align>
+				<font>font40</font>
+				<textcolor>white</textcolor>
+				<focusedcolor>white</focusedcolor>
+				<visible>yes</visible>
+				<label/>
+				<texturefocus>home/favsfo.png</texturefocus>
+				<texturenofocus>home/favs.png</texturenofocus>
+				<fadetime>200</fadetime>
+				<ondown>4500</ondown>
+				<onfocus>Skin.Reset(movies)</onfocus>
+				<onfocus>Skin.Reset(tv)</onfocus>
+				<onfocus>Skin.SetBool(favs)</onfocus>
+				<onclick>SetFocus(4500,0)</onclick>
+				<!-- <include>FOScroll</include> -->
+			</control>
+		</control>	
+		<control type="group"> <!--movies-->
+			<visible>Skin.HasSetting(movies)</visible>
+			<top>450</top>
+			<height>540</height>
+			<control type="label">
+				<top>20</top>
+				<width>100%</width>
+				<height>40</height>
+				<font>font60</font>
+				<label>Scorpion Movies</label>
+				<textcolor>green</textcolor>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+				<visible>Skin.HasSetting(movies)</visible>
+			</control>
+			<control type="wraplist" id="9900">
+				<centerleft>50%</centerleft>
+				<top>130</top>
+				<width>1560</width>
+				<height>350</height>
+				<onup>9020</onup>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout" reversable="false">400</scrolltime>
+				<itemlayout height="350" width="260">
+					<control type="image">
+						<width>260</width>
+						<height>350</height>
+						<texture background="true">home.png</texture>
+					</control>
+					<control type="image">
+						<top>-40</top>
+						<width>260</width>
+						<height>350</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordersize>35</bordersize>
+					</control>
+					<control type="label">
+						<top>250</top>
+						<width>260</width>
+						<height>50</height>
+						<align>center</align>
+						<textcolor>grey2</textcolor>
+						<font>fon25r</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="350" width="260">
+					<control type="image">
+						<width>260</width>
+						<height>350</height>
+						<texture background="true" colordiffuse="FF111111">100.png</texture>
+						<bordersize>15</bordersize>
+						<visible>!Control.HasFocus(9900)</visible>
+					</control>
+					<control type="group">
+						<control type="image">
+							<width>260</width>
+							<height>350</height>
+							<texture background="true">home.png</texture>
+							<bordertexture border="5">homefo.png</bordertexture>
+						</control>
+						<control type="image">
+							<top>-40</top>
+							<width>260</width>
+							<height>350</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordersize>35</bordersize>
+						</control>
+						<control type="label">
+							<top>250</top>
+							<width>260</width>
+							<height>50</height>
+							<align>center</align>
+							<textcolor>grey2</textcolor>
+							<font>fon25r</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<include>PanelZoom</include>
+					</control>
+				</focusedlayout>
+
+				<content>
+					<item id="1"> 
+						<label>Years</label>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieYears&quot;,return)</onclick>					
+						<icon>scorpion/years.png</icon>
+					</item>	
+					<item id="2">
+						<label>New Movies</label>
+						<icon>scorpion/latest-movies.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieWidget&quot;,return)</onclick>					
+					</item>	
+					<item id="3">
+						<label>Most Popular</label>
+						<icon>scorpion/most-popular.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=popular&quot;,return)</onclick>					
+					</item>	
+					<item id="4">
+						<label>Trending</label>
+						<icon>scorpion/people-watching.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=trending&quot;,return)</onclick>					
+					</item>	
+					<item id="5">
+						<label>Highly Rated</label>
+						<icon>scorpion/highly-rated.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=views&quot;,return)</onclick>					
+					</item>	
+					<item id="6">
+						<label>Featured</label>
+						<icon>scorpion/featuredmovies.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=featured&quot;,return)</onclick>					
+					</item>	
+					<item id="7">
+						<label>Genres</label>
+						<icon>scorpion/genres.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieGenres&quot;,return)</onclick>					
+					</item>	
+					<item id="8">
+						<label>Box Office</label>
+						<icon>scorpion/box-office.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=boxoffice&quot;,return)</onclick>					
+					</item>	
+					<item id="9">
+						<label>Oscar Winners</label>
+						<icon>scorpion/oscar-winners.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movies&amp;url=oscars&quot;,return)</onclick>					
+					</item>	
+					<item id="10"> 
+						<label>Top 100[CR]Actors</label>
+						<icon>scorpion/people.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=moviePersons&quot;,return)</onclick>					
+					</item>	
+					<item id="11">
+						<label>Actor Search</label>
+						<icon>scorpion/people-search.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=moviePerson&quot;,return)</onclick>					
+					</item>	
+					<item id="11">
+						<label>Movie Search</label>
+						<icon>scorpion/search.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=movieSearch&quot;,return)</onclick>					
+					</item>	
+				</content>			
+			</control>
+		</control>
+		<control type="group"> <!--tv-->
+			<visible>Skin.HasSetting(tv)</visible>
+			<top>450</top>
+			<width>100%</width>
+			<height>540</height>
+			<control type="label">
+				<top>20</top>
+				<width>100%</width>
+				<height>40</height>
+				<font>font60</font>
+				<textcolor>green</textcolor>
+				<label>Scorpion Tv Shows</label>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+			</control>
+			<control type="wraplist" id="9900">
+				<centerleft>50%</centerleft>
+				<top>130</top>
+				<width>1560</width>
+				<height>350</height>
+				<onup>9020</onup>
+				<orientation>horizontal</orientation>
+				<focusposition>2</focusposition>
+				<preloaditems>2</preloaditems>
+				<scrolltime tween="sine" easing="inout" reversable="false">400</scrolltime>
+				<itemlayout height="350" width="260">
+					<control type="image">
+						<width>260</width>
+						<height>350</height>
+						<texture background="true">home.png</texture>
+					</control>
+					<control type="image">
+						<top>-40</top>
+						<width>260</width>
+						<height>350</height>
+						<aspectratio>keep</aspectratio>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordersize>35</bordersize>
+					</control>
+					<control type="label">
+						<top>250</top>
+						<width>260</width>
+						<height>50</height>
+						<align>center</align>
+						<textcolor>grey2</textcolor>
+						<font>fon25r</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="350" width="260">
+					<control type="image">
+						<width>260</width>
+						<height>350</height>
+						<texture background="true" colordiffuse="FF111111">100.png</texture>
+						<bordersize>15</bordersize>
+						<visible>!Control.HasFocus(9900)</visible>
+					</control>
+					<control type="group">
+						<control type="image">
+							<width>260</width>
+							<height>350</height>
+							<texture background="true">home.png</texture>
+							<bordertexture border="5">homefo.png</bordertexture>
+						</control>
+						<control type="image">
+							<top>-40</top>
+							<width>260</width>
+							<height>350</height>
+							<aspectratio>keep</aspectratio>
+							<texture background="true">$INFO[ListItem.Icon]</texture>
+							<bordersize>35</bordersize>
+						</control>
+						<control type="label">
+							<top>250</top>
+							<width>260</width>
+							<height>50</height>
+							<align>center</align>
+							<textcolor>grey2</textcolor>
+							<font>fon25r</font>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+						<include>PanelZoom</include>
+					</control>
+				</focusedlayout>
+				
+
+				<content>
+					<item id="12">
+						<label>New Shows</label>
+						<icon>scorpion/new-tvshows.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvshows&amp;url=premiere&quot;,return)</onclick>	
+					</item>	
+					<item id="13">
+						<label>Networks</label>
+						<icon>scorpion/networks.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvNetworks&quot;,return)</onclick>					
+					</item>	
+					<item id="14"> 
+						<label>Most Popular</label>
+						<icon>scorpion/most-popular.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvshows&amp;url=popular&quot;,return)</onclick>					
+					</item>	
+					<item id="15"> 
+						<label>Featured</label>
+						<icon>scorpion/featuredtv.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvshows&amp;url=featured&quot;,return)</onclick>					
+					</item>	
+					<item id="16">
+						<label>Highly Rated</label>
+						<icon>scorpion/highly-rated.png</icon>
+					<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvshows&amp;url=rating&quot;,return)</onclick>					
+					</item>	
+					<item id="17">
+						<label>Genres</label>
+						<icon>scorpion/genres.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvGenres&quot;,return)</onclick>					
+					</item>	
+					<item id="18">
+						<label>Calendar</label>
+						<icon>scorpion/calendar.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=calendars&quot;,return)</onclick>					
+					</item>	
+					<item id="19"> 
+						<label>Airing Today</label>
+						<icon>scorpion/airing-today.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvshows&amp;url=airing&quot;,return)</onclick>					
+					</item>	
+					<item id="20"> 
+						<label>Search</label>
+						<icon>scorpion/search.png</icon>
+						<onclick>ActivateWindow(10025,&quot;plugin://plugin.video.scorpion/?action=tvSearch&quot;,return)</onclick>					
+					</item>	
+				</content>
+			</control>
+		</control>
+		<control type="group" id="9903"> <!--favourites-->
+			<visible>Skin.HasSetting(favs)</visible>
+			<top>450</top>
+			<width>100%</width>
+			<height>540</height>
+			<control type="label">
+				<top>-30</top>
+				<width>100%</width>
+				<height>40</height>
+				<font>font60</font>
+				<textcolor>green</textcolor>
+				<label>Favourites</label>
+				<align>center</align>
+				<textcolor>white2</textcolor>
+			</control>
+			<control type="panel" id="4500">
+				<centerleft>50%</centerleft>
+				<top>50</top>
+				<width>1260</width>
+				<height>520</height>
+				<onup>9020</onup>
+				<onleft>9801</onleft>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<content>favourites://</content>
+				<itemlayout height="260" width="200">
+					<control type="image">
+						<width>185</width>
+						<height>250</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="5" colordiffuse="light">panel.png</bordertexture>
+						<bordersize>3</bordersize>
+					</control>
+				</itemlayout>
+				<focusedlayout height="260" width="200">
+					<control type="image">
+						<width>185</width>
+						<height>250</height>
+						<texture background="true">$INFO[ListItem.Icon]</texture>
+						<bordertexture border="5" colordiffuse="green">panel.png</bordertexture>
+						<bordersize>3</bordersize>
+						<include>PanelZoom</include>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="image">
+				<left>910</left>
+				<top>570</top>
+				<width>100</width>
+				<height>45</height>
+				<texture background="true">dnarrow.png</texture>
+				<visible>!Control.IsVisible(9904) + Container(4500).HasNext</visible>
+			</control>	
+		</control>
+		<control type="group" id="9904">
+			<centerleft>50%</centerleft>
+			<top>725</top>
+			<width>1620</width>	
+			<visible>!Control.IsVisible(9903)</visible>
+			<control type="image" id="9901">
+				<left>1</left>
+				<width>32</width>
+				<height>50</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">homearrowl.png</texture>
+			</control>
+			<control type="image">
+				<right>1</right>
+				<width>32</width>
+				<height>50</height>
+				<aspectratio>keep</aspectratio>
+				<texture background="true">homearrowr.png</texture>
+			</control>	
+		</control>
+		<include>sidemenu</include>
+	</controls>
+</window>

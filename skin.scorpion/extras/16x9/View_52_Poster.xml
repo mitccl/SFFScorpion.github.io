@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<include name="Poster">
+		<control type="group">
+			<include>WindowSlide</include>
+			<visible>Control.IsVisible(52) + !Window.IsActive(selectdialog)</visible>
+			<control type="image">
+				<width>100%</width>
+				<height>100%</height>
+				<texture background="true" diffuse="artdiff.png">$INFO[Container.ListItemAbsolute(1).Art(fanart)]</texture>
+			</control>
+			<control type="label">
+				<top>80</top>
+				<width>100%</width>
+				<height>60</height>
+				<align>center</align>
+				<font>font60</font>
+				<shadowcolor>green</shadowcolor>
+				<label>$INFO[ListItem.TvShowTitle]</label>
+			</control>
+			<control type="textbox">
+				<left>200</left>
+				<bottom>40</bottom>
+				<width>1520</width>
+				<height>180</height>
+				<font>font35r</font>
+				<align>justify</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Plot]</label>
+			</control>
+<!-- arrows -->
+			<control type="group">
+				<top>300</top>
+				<control type="image">
+					<left>15</left>
+					<width>80</width>
+					<height>150</height>
+					<texture>homearrowl.png</texture>
+				</control>
+				<control type="image">
+					<right>15</right>
+					<width>80</width>
+					<height>150</height>
+					<texture>homearrowr.png</texture>
+				</control>
+			</control>
+
+<!-- season list -->
+			<control type="group">
+				<left>140</left>
+				<top>195</top>
+				<width>1640</width>
+				<height>370</height>
+				<control type="wraplist" id="52">
+					<left>15</left>
+					<width>1630</width>
+					<height>350</height>
+					<onleft>52</onleft>
+					<onright>52</onright>
+					<onup condition="![String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool) | Window.Previous(selectdialog)]">9801</onup>
+					<onup condition="[String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool) | Window.Previous(selectdialog)]">1111</onup>
+					<ondown>6000</ondown>
+					<orientation>horizontal</orientation>
+					<focusposition>2</focusposition>
+					<viewtype label="Poster">list</viewtype>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="sine" easing="in" reversable="false">350</scrolltime>
+					<itemlayout height="390" width="340">
+						<control type="group">
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture colordiffuse="mid">100.png</texture>
+								<bordersize>4</bordersize>
+								<visible>ListItem.IsParentFolder</visible>
+							</control>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<aspectratio>keep</aspectratio>
+								<texture background="true">$VAR[Image_Var]</texture>
+								<bordersize>4</bordersize>
+								<bordertexture border="5" colordiffuse="mid">panel.png</bordertexture>
+							</control>
+							<control type="label">
+								<left>-50</left>
+								<top>295</top>
+								<height>50</height>
+								<width>350</width>
+								<align>center</align>
+								<font>font40</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!ListItem.IsParentFolder</visible>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="390" width="340">
+						<control type="group">
+							<include>PosterScroll</include>
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture colordiffuse="mid">100.png</texture>
+								<bordersize>4</bordersize>
+								<bordertexture border="5" colordiffuse="green">panel.png</bordertexture>
+							</control>
+							<!-- <control type="image"> -->
+								<!-- <width>250</width> -->
+								<!-- <height>350</height> -->
+								<!-- <texture background="true">$INFO[ListItem.Icon]</texture> -->
+								<!-- <bordersize>4</bordersize> -->
+							<!-- </control> -->
+							<!-- <control type="image"> -->
+								<!-- <width>250</width> -->
+								<!-- <height>350</height> -->
+								<!-- <texture colordiffuse="mid">100.png</texture> -->
+								<!-- <bordersize>4</bordersize> -->
+							<!-- </control> -->
+							<control type="image">
+								<width>250</width>
+								<height>350</height>
+								<texture background="true">$VAR[Image_Var]</texture>
+								<bordersize>4</bordersize>
+								<bordertexture border="5" colordiffuse="green">panel.png</bordertexture>
+							</control>
+							<control type="label">
+								<left>-50</left>
+								<top>295</top>
+								<height>50</height>
+								<width>350</width>
+								<align>center</align>
+								<font>font40</font>
+								<textcolor>white</textcolor>
+								<shadowcolor>black</shadowcolor>
+								<label>$INFO[ListItem.Label]</label>
+								<visible>!ListItem.IsParentFolder</visible>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

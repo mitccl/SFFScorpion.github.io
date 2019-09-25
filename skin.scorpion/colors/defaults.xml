@@ -1,0 +1,28 @@
+<colors>
+	<color name="white">FFFFFFFF</color>
+	<color name="white2">FFe3e3e3</color>
+	<color name="grey">FF909090</color>
+	<color name="grey2">FF808080</color>
+	<color name="grey3">FF505050</color>
+	<color name="black">FF000000</color>
+	<color name="blue">FF057dc2</color>
+	<color name="red">FFc72425</color>
+	<color name="bgreen">FF018240</color>
+	<color name="green">FF018240</color>
+	<color name="cyan">FF000000</color>
+	<color name="pink">FF7f0060</color>
+	<color name="selected">FF05ab74</color>
+	<color name="invalid">FFFF0000</color>
+	<color name="themecolor">FF018240</color>
+	<color name="themecolor_transparent">99018240</color>
+	<color name="shadow">black</color>
+	<color name="btn">FF006b34</color>
+	<color name="label">FFDFDFDF</color>
+	<color name="labelfo">FFFFFFFF</color>
+	<color name="icon">FFDFDFDF</color>
+	<color name="light">FF2f2f2f</color>
+	<color name="mid">FF2a2a2a</color>
+	<color name="dark">FF1e1e1e</color>
+	<color name="darker">FF101010</color>
+	<color name="bg">FF1a1a1a</color>
+</colors>

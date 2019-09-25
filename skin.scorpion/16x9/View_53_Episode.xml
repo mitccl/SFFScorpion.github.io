@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Episode List -->
+	<include name="EpisodeList">
+		<control type="image">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true">$INFO[Container.ListItemAbsolute(1).Art(fanart)]</texture>
+			<visible>![Container.IsUpdating | !Control.IsVisible(53)]</visible>
+		</control>
+		<control type="group">
+			<visible>Control.IsVisible(53)</visible>
+			<left>60</left>
+			<top>120</top>
+			<width>1800</width>
+			<height>920</height>
+			<include>WindowSlide</include>
+			<control type="image">
+				<width>100%</width>
+				<height>100%</height>
+				<texture colordiffuse="dark">65.png</texture>
+			</control>
+			<control type="group">
+				<control type="wraplist" id="53">
+					<left>5</left>
+					<top>10</top>
+					<width>1800</width>
+					<height>900</height>
+					<onup>50</onup>
+					<ondown>50</ondown>
+					<onleft condition="![String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">9801</onleft>
+					<onleft condition="[String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">1111</onleft>
+					<focusposition>1</focusposition>
+					<preloaditems>2</preloaditems>
+					<viewtype label="Episodes">list</viewtype>
+					<scrolltime tween="quadratic" easing="out">400</scrolltime>
+					<itemlayout height="300" width="1780">
+						<control type="group">
+							<left>30</left>
+							<top>14</top>
+							<height>265</height>
+							<control type="image">
+								<height>265</height>
+								<width>465</width>
+								<texture background="true">$VAR[Panel_Var]</texture>
+								<aspectratio>keep</aspectratio>
+								<bordersize>5</bordersize>
+								<bordertexture colordiffuse="mid">60.png</bordertexture>
+							</control>
+						</control>
+						<control type="group">
+							<left>545</left>
+							<top>25</top>
+							<control type="image">
+								<top>1</top>
+								<width>45</width>
+								<height>30</height>
+								<aspectratio>keep</aspectratio>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<visible>!ListItem.IsParentFolder</visible>
+							</control>
+							<control type="label">
+								<left>90</left>
+								<width>1200</width>
+								<aligny>center</aligny>
+								<font>font50</font>
+								<textcolor>green</textcolor>
+								<shadowcolor>FF58ffaa</shadowcolor>
+								<label> • BACK • </label>
+								<visible>ListItem.IsParentFolder</visible>
+							</control>
+							<control type="label">
+								<left>70</left>
+								<width>1180</width>
+								<height>30</height>
+								<textcolor>green</textcolor>
+								<shadowcolor>FF58ffaa</shadowcolor>
+								<label>$VAR[List_Var]</label>
+								<visible>!ListItem.IsParentFolder</visible>
+							</control>
+						</control>
+						<control type="group">
+							<top>90</top>
+							<left>545</left>
+							<height>40</height>
+							<visible>!ListItem.IsParentFolder</visible>
+							<control type="image">
+								<top>-20</top>
+								<width>100</width>
+								<height>80</height>
+								<aspectratio>keep</aspectratio>
+								<texture diffuse="65.png">$VAR[Studio]</texture>
+							</control>
+							<control type="image">
+								<left>150</left>
+								<width>50</width>
+								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<texture fallback="nr.png">$INFO[ListItem.MPAA,flags/mpaa/info/,.png]</texture>
+							</control>
+							<control type="label">
+								<left>250</left>
+								<height>40</height>
+								<width>1180</width>
+								<font>font35</font>
+								<textcolor>white2</textcolor>
+								<label>$VAR[Label_InfoLine]</label>
+							</control>
+						</control>
+						<control type="group">
+							<bottom>20</bottom>
+							<height>140</height>
+							<control type="textbox">
+								<label>$INFO[ListItem.Plot]</label>
+								<left>550</left>
+								<width>1180</width>
+								<bottom>1</bottom>
+								<aligny>center</aligny>
+								<textcolor>white2</textcolor>
+								<autoscroll>false</autoscroll>
+								<font>font30</font>
+							</control>
+						</control>
+					</itemlayout>
+					<focusedlayout height="300" width="1780">
+						<control type="image">
+							<left>10</left>
+							<width>1770</width>
+							<height>300</height>
+							<texture  background="true" border="20" colordiffuse="green">focus.png</texture>
+							<include>FOScroll</include>
+						</control>
+						<control type="image">
+							<left>30</left>
+							<top>14</top>
+							<height>265</height>
+							<width>465</width>
+							<texture background="true">$VAR[Panel_Var]</texture>
+							<aspectratio>keep</aspectratio>
+							<bordersize>5</bordersize>
+							<bordertexture colordiffuse="mid">60.png</bordertexture>
+						</control>
+						<control type="group">
+							<left>545</left>
+							<top>25</top>
+							<control type="image">
+								<top>1</top>
+								<width>45</width>
+								<height>30</height>
+								<aspectratio>keep</aspectratio>
+								<texture>$INFO[ListItem.Overlay]</texture>
+								<visible>!ListItem.IsParentFolder</visible>
+							</control>
+							<control type="label">
+								<left>90</left>
+								<width>1200</width>
+								<aligny>center</aligny>
+								<font>font50</font>
+								<textcolor>green</textcolor>
+								<shadowcolor>FF58ffaa</shadowcolor>
+								<label> • BACK • </label>
+								<visible>ListItem.IsParentFolder</visible>
+							</control>
+							<control type="label">
+								<left>70</left>
+								<width>1180</width>
+								<height>30</height>
+								<textcolor>green</textcolor>
+								<shadowcolor>FF58ffaa</shadowcolor>
+								<label>$VAR[List_Var]</label>
+								<visible>!ListItem.IsParentFolder</visible>
+							</control>
+						</control>
+						<control type="group">
+							<top>90</top>
+							<left>545</left>
+							<height>40</height>
+							<visible>!ListItem.IsParentFolder</visible>
+							<control type="image">
+								<top>-20</top>
+								<width>100</width>
+								<height>80</height>
+								<aspectratio>keep</aspectratio>
+								<texture diffuse="65.png">$VAR[Studio]</texture>
+							</control>
+							<control type="image">
+								<left>150</left>
+								<width>50</width>
+								<height>40</height>
+								<aspectratio>keep</aspectratio>
+								<texture fallback="nr.png">$INFO[ListItem.MPAA,flags/mpaa/info/,.png]</texture>
+							</control>
+							<control type="label">
+								<left>250</left>
+								<height>40</height>
+								<width>1180</width>
+								<font>font35</font>
+								<textcolor>white2</textcolor>
+								<label>$VAR[Label_InfoLine]</label>
+							</control>
+						</control>
+						<control type="group">
+							<bottom>20</bottom>
+							<height>140</height>
+							<visible>!ListItem.IsParentFolder</visible>
+							<control type="textbox">
+								<label>$INFO[ListItem.Plot]</label>
+								<left>550</left>
+								<width>1180</width>
+								<bottom>1</bottom>
+								<aligny>center</aligny>
+								<textcolor>white2</textcolor>
+								<autoscroll>true</autoscroll>
+								<font>font30</font>
+							</control>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<!-- Video InfoWall -->
+	<include name="Wall">
+		<control type="group">
+			<visible>![Container.IsUpdating | !Control.IsVisible(55)]</visible>
+			<include>WindowSlide</include>
+			<control type="group">
+				<control type="panel" id="55">
+					<top>150</top>
+					<centerleft>50%</centerleft>
+					<width>90%</width>
+					<height>720</height>
+					<onup>55</onup>
+					<ondown>55</ondown>
+					<onleft condition="![String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">9801</onleft>
+					<onleft condition="[String.Contains(ListItem.FolderPath,views) | String.Contains(ListItem.FolderPath,tool)]">1111</onleft>
+					<preloaditems>2</preloaditems>
+					<scrolltime tween="quadratic" easing="in" reversable="false">300</scrolltime>
+					<viewtype label="Wall">panel</viewtype>
+					<itemlayout height="240" width="400">
+						<control type="image">
+							<height>240</height>
+							<width>400</width>
+							<!-- <aspectratio>keep</aspectratio> -->
+							<texture colordiffuse="black">100.png</texture>
+							<bordersize>10</bordersize>
+						</control>
+						<control type="image">
+							<!-- <height>290</height> -->
+							<width>400</width>
+							<aspectratio>keep</aspectratio>
+							<texture >$VAR[Panel_Var]</texture>
+							<bordersize>10</bordersize>
+						</control>
+					</itemlayout>
+					<focusedlayout height="240" width="400">
+						<control type="image">
+							<!-- <height>290</height> -->
+							<width>400</width>
+							<aspectratio>keep</aspectratio>
+							<texture>$VAR[Panel_Var]</texture>
+							<bordersize>10</bordersize>
+							<!-- <bordertexture border="5" colordiffuse="green" condition="!ListItem.IsParentFolder">focusls.png</bordertexture> -->
+							<include>PanelZoom</include>
+						</control>
+					</focusedlayout>
+				</control>
+			</control>
+		</control>
+	</include>
+</includes>
